@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trío Tikismikis · Folclore argentino</title>
+<meta name="description" content="Trío Tikismikis, el trío franco-argentino de Toulouse. Folclore argentino de raíz: voces, guitarra, bombo legüero, bandoneón y violín. Disco: Pedaleando Sueños.">
+<!-- Vista previa al compartir el enlace (WhatsApp, Facebook, etc.). Las direcciones tienen que ser completas:
+     si el sitio va en otra dirección, cambiar las tres que empiezan con https://www.triotikismikis.com/ -->
+<link rel="canonical" href="https://www.triotikismikis.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Trío Tikismikis">
+<meta property="og:url" content="https://www.triotikismikis.com/">
+<meta property="og:title" content="Trío Tikismikis · Folclore argentino">
+<meta property="og:description" content="El trío franco-argentino de Toulouse. Folclore argentino de raíz, canciones propias y repertorio popular. Disco: Pedaleando Sueños.">
+<meta property="og:image" content="https://www.triotikismikis.com/fotos/vista-previa.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Los tres integrantes del Trío Tikismikis con sus instrumentos">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@400;900&family=Alegreya:ital,wght@0,400;0,700;1,400;1,500;1,700&family=Alegreya+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<!--
+  CÓMO CAMBIAR LOS TEXTOS
+  - El castellano está escrito acá abajo, en la página. El francés y el inglés están al final,
+    en la lista «TEXTOS» (cada renglón: clave, francés, inglés). La clave es la que figura en data-t="…".
+  - Las fotos están en la carpeta «fotos» de al lado. Para cambiar una, reemplazar el archivo con el mismo nombre.
+  - Los videos: cambiar el código de YouTube en data-yt="…".
+  - Los colores salen de la tapa de «Pedaleando Sueños» (Dolores Mendieta): están todos juntos acá abajo, en «:root».
+-->
+<style>
+  :root {
+    --tinta: #1b120c;         /* el trazo negro de la pintura */
+    --tierra: #33200f; --borgona: #6e1f2c; --petroleo: #173f47;
+    --terracota: #b5462a; --ocre: #d49a2c; --sol: #edb93a;
+    --crema: #eadbb8; --papel: #f4e9cf; --hueso: #f6efdc;
+    --suave: #5d4a39; --enlace: #9a3418;
+    --titulo: "Londrina Solid", "Arial Black", Impact, sans-serif;
+    --verso: "Alegreya", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+    --ui: "Alegreya Sans", "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+    --trazo: 3px solid var(--tinta);
+    /* la chakana de la bandera de la tapa */
+    --chakana: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath fill-rule='evenodd' d='M10 0h10v5h5v5h5v10h-5v5h-5v5H10v-5H5v-5H0V10h5V5h5zM15 10.5a4.5 4.5 0 1 0 0 9a4.5 4.5 0 0 0 0-9z'/%3E%3C/svg%3E");
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 64px; }
+  body { margin: 0; background: var(--crema); color: var(--tinta); font: 18px/1.6 var(--ui); }
+  /* grano de papel de afiche sobre toda la página */
+  body::after { content: ""; position: fixed; inset: 0; z-index: 50; pointer-events: none; opacity: .11; mix-blend-mode: multiply;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.1 -.2'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23g)'/%3E%3C/svg%3E"); }
+  img { max-width: 100%; height: auto; display: block; }
+  a { color: var(--enlace); text-underline-offset: 3px; }
+  :focus-visible { outline: 3px solid var(--sol); outline-offset: 3px; }
+  .ancho { max-width: 1120px; margin: 0 auto; padding: 0 22px; }
+  figure { margin: 0; }
+  p { margin: 0 0 14px; }
+
+  /* marco de grabado: trazo negro, esquinas rectas, sombra plena */
+  .marco { border: var(--trazo); box-shadow: 7px 7px 0 var(--tinta); background: var(--tinta); }
+  .oscuro .marco { border-color: var(--hueso); box-shadow: 7px 7px 0 var(--terracota); }
+
+  /* guarda escalonada andina y franja con los siete colores de la wiphala de la tapa */
+  .guarda { height: 26px; background-color: var(--tinta); background-position: center; background-size: 44px 26px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='26'%3E%3Cpath d='M0 20H6V15H11V10H16V5H28V10H33V15H38V20H44' fill='none' stroke='%23d49a2c' stroke-width='2.6'/%3E%3Crect x='19.5' y='12' width='5' height='5' fill='%23b5462a'/%3E%3C/svg%3E"); }
+  .wiphala { height: 7px; background: linear-gradient(90deg, #b3261e 0 14.28%, #d9681d 0 28.57%, #edb93a 0 42.85%, #f6efdc 0 57.14%, #4f7d2a 0 71.42%, #1f5c8a 0 85.71%, #5b3a8c 0); }
+
+  /* barra de arriba */
+  .barra { position: sticky; top: 0; z-index: 20; background: var(--tinta); color: #fff; }
+  .barra .ancho { display: flex; align-items: center; gap: 18px; min-height: 56px; }
+  .barra .nombre { font: 900 23px/1 var(--titulo); color: var(--hueso); text-decoration: none; white-space: nowrap; letter-spacing: .05em; text-transform: uppercase; }
+  .barra nav { display: flex; gap: 2px; margin-left: auto; overflow-x: auto; scrollbar-width: none; }
+  .barra nav::-webkit-scrollbar { display: none; }
+  .barra nav a { color: #e9dcc0; text-decoration: none; padding: 8px 10px; font: 700 14.5px var(--ui); letter-spacing: .09em; text-transform: uppercase; white-space: nowrap; }
+  .barra nav a:hover { color: var(--sol); }
+  .idiomas { display: flex; border: 2px solid rgba(246,239,220,.4); flex: none; }
+  .idiomas button { font: 800 13.5px var(--ui); letter-spacing: .06em; background: none; border: 0; color: #d8c9aa; padding: 6px 9px; cursor: pointer; }
+  .idiomas button[aria-pressed="true"] { background: var(--ocre); color: var(--tinta); }
+
+  /* portada: tierra oscura, el logo en hueso, la foto de fondo rojo y negro */
+  .portada { background: radial-gradient(110% 120% at 85% 30%, #4a1620 0%, #2a130f 45%, var(--tinta) 80%); color: var(--hueso); overflow: hidden; }
+  .portada .ancho { display: grid; grid-template-columns: minmax(0, .86fr) minmax(0, 1.14fr); gap: 52px; align-items: center; padding-top: 74px; padding-bottom: 84px; }
+  .sobre { font: 800 14.5px var(--ui); letter-spacing: .2em; text-transform: uppercase; color: var(--ocre); margin: 0 0 20px; display: flex; align-items: center; gap: 12px; }
+  .sobre::before { content: ""; width: 20px; height: 20px; background: var(--terracota); -webkit-mask: var(--chakana) center / contain no-repeat; mask: var(--chakana) center / contain no-repeat; }
+  .portada h1 { margin: 0 0 26px; }
+  /* el logo es negro sobre blanco: invertido y fundido queda en hueso sobre lo oscuro */
+  .portada h1 img { width: min(100%, 470px); filter: invert(1) sepia(.25) brightness(.97); mix-blend-mode: screen; }
+  .portada .bajada { font: 400 clamp(20px, 2.1vw, 24px)/1.45 var(--verso); margin: 0 0 30px; max-width: 26em; color: #efe4c9; }
+  .botones { display: flex; flex-wrap: wrap; gap: 14px; }
+  .btn { display: inline-flex; align-items: center; gap: 9px; font: 800 15.5px var(--ui); letter-spacing: .1em; text-transform: uppercase; text-decoration: none; padding: 12px 20px; color: var(--tinta);
+    border: var(--trazo); box-shadow: 4px 4px 0 var(--tinta); cursor: pointer; transition: transform .12s, box-shadow .12s; }
+  .btn:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--tinta); }
+  .btn.ocre { background: var(--ocre); }
+  .btn.terracota { background: var(--terracota); color: #fff; }
+  .btn.hueso { background: var(--hueso); }
+  .btn.tinta { background: var(--tinta); color: var(--hueso); box-shadow: 4px 4px 0 var(--terracota); }
+  .btn.tinta:hover { box-shadow: 6px 6px 0 var(--terracota); }
+  .oscuro .btn { border-color: var(--tinta); box-shadow: 4px 4px 0 rgba(0,0,0,.55); }
+  .btn.linea { background: none; color: var(--hueso); border-color: var(--hueso); box-shadow: none; }
+  .btn.linea:hover { background: rgba(246,239,220,.1); box-shadow: none; transform: none; }
+  .portada .foto img { width: 100%; }
+
+  /* tira de credenciales */
+  .credenciales { background: var(--tinta); color: #e9dcc0; }
+  .credenciales ul { list-style: none; margin: 0; padding: 22px 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px 30px; }
+  .credenciales li { font-size: 16.5px; line-height: 1.35; padding-left: 16px; border-left: 4px solid var(--terracota); }
+  .credenciales b { display: block; font: 400 22px/1.2 var(--titulo); letter-spacing: .03em; text-transform: uppercase; color: var(--hueso); }
+
+  /* secciones */
+  section.bloque { padding: 78px 0; }
+  .f-crema { background: var(--crema); } .f-papel { background: var(--papel); } .f-ocre { background: var(--ocre); }
+  .oscuro { color: var(--hueso); }
+  .f-tierra { background: var(--tierra); } .f-petroleo { background: var(--petroleo); } .f-tinta { background: var(--tinta); }
+  h2 { font: 900 clamp(42px, 5.2vw, 60px)/.95 var(--titulo); margin: 0 0 14px; text-transform: uppercase; letter-spacing: .02em; display: flex; align-items: center; gap: 16px; }
+  h2::before { content: ""; flex: none; width: 34px; height: 34px; background: var(--terracota); -webkit-mask: var(--chakana) center / contain no-repeat; mask: var(--chakana) center / contain no-repeat; }
+  .oscuro h2::before { background: var(--ocre); }
+  .f-ocre h2::before { background: var(--borgona); }
+  .entrada { font: italic 500 23px/1.45 var(--verso); color: var(--suave); margin: 0 0 34px; max-width: 32em; }
+  .oscuro .entrada { color: #d9c9a6; }
+  h3 { font: 400 27px/1.15 var(--titulo); letter-spacing: .03em; text-transform: uppercase; margin: 0 0 6px; }
+
+  /* concierto */
+  .dos { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: 54px; align-items: center; }
+  .dos .largo p { font: 400 20px/1.6 var(--verso); max-width: 32em; }
+  .escena { margin: 26px 0 0; padding: 14px 0 0; border-top: var(--trazo); font: 800 15px var(--ui); letter-spacing: .14em; text-transform: uppercase; line-height: 1.9; }
+  .escena i { font-style: normal; color: var(--terracota); margin: 0 3px; }
+  .dos .marco img { width: 100%; }
+
+  /* videos */
+  .videos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 34px; }
+  .video.grande { grid-column: 1 / -1; }
+  .video figcaption { margin-top: 18px; font: 400 23px/1.2 var(--titulo); letter-spacing: .03em; text-transform: uppercase; }
+  .video figcaption a { font: 700 15px var(--ui); letter-spacing: .04em; text-transform: none; margin-left: 8px; white-space: nowrap; color: var(--sol); }
+  .pantalla { position: relative; aspect-ratio: 16 / 9; }
+  .pantalla button { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; padding: 0; cursor: pointer; background: #000 center / cover no-repeat; }
+  /* el botón de reproducir es la rueda de la bici */
+  .pantalla button::after { content: ""; position: absolute; left: 50%; top: 50%; width: 92px; height: 92px; margin: -46px 0 0 -46px; transition: transform .5s;
+    background: center / contain no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'%3E%3Ccircle cx='40' cy='40' r='35' fill='%23f6efdc' stroke='%231b120c' stroke-width='8'/%3E%3Cpath d='M40 6V74M6 40H74M16 16L64 64M64 16L16 64M27 8.6L53 71.4M71.4 27L8.6 53M53 8.6L27 71.4M71.4 53L8.6 27' stroke='%231b120c' stroke-width='1.6'/%3E%3Ccircle cx='40' cy='40' r='17' fill='%23b5462a' stroke='%231b120c' stroke-width='3'/%3E%3Cpath d='M35.5 31v18l14.5-9z' fill='%23f6efdc'/%3E%3C/svg%3E"); filter: drop-shadow(0 4px 12px rgba(0,0,0,.6)); }
+  .pantalla button:hover::after { transform: rotate(90deg) scale(1.06); }
+  .pantalla iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+  /* disco */
+  .disco { display: grid; grid-template-columns: minmax(0, 480px) minmax(0, 1fr); gap: 58px; align-items: center; }
+  .disco .ficha { font: 800 14.5px var(--ui); letter-spacing: .14em; text-transform: uppercase; color: var(--borgona); margin: 0 0 10px; }
+  .disco h2::before { display: none; }
+  .disco h2 { margin-bottom: 18px; }
+  .disco p { font: 400 19.5px/1.6 var(--verso); }
+  .disco .creditos { font: 500 16px/1.5 var(--ui); color: #4a3418; margin: 18px 0 24px; }
+  details.temas { margin-top: 52px; background: var(--papel); border: var(--trazo); box-shadow: 7px 7px 0 var(--tinta); }
+  details.temas summary { cursor: pointer; padding: 16px 24px; font: 400 26px/1.2 var(--titulo); letter-spacing: .03em; text-transform: uppercase; list-style: none; display: flex; align-items: center; gap: 14px; }
+  details.temas summary::-webkit-details-marker { display: none; }
+  details.temas summary::before { content: "+"; flex: none; width: 32px; height: 32px; background: var(--tinta); color: var(--hueso); display: grid; place-items: center; font: 800 22px/1 var(--ui); }
+  details.temas[open] summary::before { content: "–"; }
+  details.temas ol { margin: 0; padding: 4px 26px 22px 56px; columns: 2 300px; column-gap: 44px; }
+  details.temas li { padding: 5px 0 5px 4px; break-inside: avoid; font: 700 19px/1.35 var(--verso); }
+  details.temas li span { display: block; font: 400 15.5px/1.3 var(--ui); color: var(--suave); }
+  details.temas .invitados { margin: 0; padding: 14px 26px 20px; border-top: var(--trazo); font-size: 16.5px; color: var(--suave); }
+
+  /* el trío y sus integrantes */
+  .historia { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 370px); gap: 54px; align-items: center; margin-bottom: 60px; }
+  .historia p { font: 400 20px/1.6 var(--verso); max-width: 33em; }
+  .historia p:first-of-type { font-size: 23px; line-height: 1.5; }
+  .integrantes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+  .integrante { background: var(--papel); display: flex; flex-direction: column; }
+  .integrante img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+  .integrante .cuerpo { padding: 20px 22px 22px; display: flex; flex-direction: column; flex: 1; border-top: 8px solid var(--terracota); }
+  .integrante:nth-child(2) .cuerpo { border-color: var(--ocre); }
+  .integrante:nth-child(3) .cuerpo { border-color: var(--borgona); }
+  .integrante h3 { font-size: 33px; margin-bottom: 4px; }
+  .integrante .toca { font: 800 14px/1.45 var(--ui); letter-spacing: .1em; text-transform: uppercase; color: var(--borgona); margin: 0 0 12px; }
+  .integrante p { font: 400 18px/1.55 var(--verso); }
+  .integrante .mas { margin: auto 0 0; padding-top: 6px; font: 700 16px var(--ui); display: flex; flex-wrap: wrap; gap: 4px 18px; }
+
+  /* prensa */
+  .citas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-bottom: 52px; }
+  .cita { background: var(--papel); color: var(--tinta); border: var(--trazo); box-shadow: 6px 6px 0 var(--tinta); padding: 24px 26px 20px; margin: 0; display: flex; flex-direction: column; gap: 14px; }
+  .cita p { font: italic 500 24px/1.32 var(--verso); margin: 0; }
+  .cita.grande { grid-column: 1 / -1; background: var(--borgona); padding: 38px 40px 30px; border-color: var(--tinta); }
+  .cita.grande p { color: var(--hueso); font: 400 clamp(32px, 4.6vw, 52px)/1.04 var(--titulo); letter-spacing: .015em; text-transform: uppercase; }
+  .cita footer { font-size: 16px; color: var(--suave); margin-top: auto; }
+  .cita footer b { color: var(--tinta); }
+  .cita.grande footer { color: #ecd3cf; }
+  .cita.grande footer b { color: var(--sol); }
+  .cita.grande footer a { color: #fff; }
+  .sono { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 40px; }
+  .sono h3 { grid-column: 1 / -1; margin-bottom: 12px; }
+  .sono ul { list-style: none; margin: 0; padding: 0; }
+  .sono li { padding: 12px 0; border-top: 2px solid rgba(246,239,220,.45); font-size: 17px; line-height: 1.35; }
+  .sono li b { font: 700 20px var(--verso); }
+  .sono li span { color: #cfdcd6; display: block; }
+  .sono li a { text-decoration: none; color: inherit; }
+  .sono li a:hover b { color: var(--sol); text-decoration: underline; }
+
+  /* fotos */
+  .galeria { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+  .galeria a { display: block; border: var(--trazo); box-shadow: 6px 6px 0 var(--tinta); overflow: hidden; background: var(--tinta); }
+  .galeria a.ancha { grid-column: span 2; }
+  .galeria img { width: 100%; height: 100%; aspect-ratio: 1 / 1; object-fit: cover; transition: transform .35s; }
+  .galeria a.ancha img { aspect-ratio: auto; }
+  .galeria a:hover img { transform: scale(1.04); }
+  .nota { font-size: 16px; color: var(--suave); margin-top: 22px; }
+
+  /* contacto */
+  .contacto { padding: 70px 0 64px; }
+  .tarjetas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-top: 28px; }
+  .tarjeta { border: 3px solid var(--hueso); padding: 24px 26px; }
+  .tarjeta h3 { color: var(--ocre); font: 800 14.5px var(--ui); letter-spacing: .18em; text-transform: uppercase; margin-bottom: 10px; }
+  .tarjeta .quien { font: 400 32px/1.1 var(--titulo); letter-spacing: .03em; text-transform: uppercase; color: #fff; margin: 0 0 10px; }
+  .tarjeta p { margin: 0 0 4px; }
+  .tarjeta a { color: #fff; }
+  .redes { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
+  .redes a { color: var(--hueso); text-decoration: none; font: 700 14.5px var(--ui); letter-spacing: .1em; text-transform: uppercase; border: 2px solid rgba(246,239,220,.5); padding: 8px 16px; }
+  .redes a:hover { border-color: var(--sol); color: var(--sol); }
+  .pie { background: var(--tinta); color: #b9a888; font-size: 14.5px; padding: 18px 0 26px; border-top: 1px solid rgba(246,239,220,.2); }
+  .pie .ancho { display: flex; flex-wrap: wrap; gap: 6px 24px; justify-content: space-between; }
+
+  @media (max-width: 860px) {
+    body { font-size: 17px; }
+    .barra nav { display: none; }
+    .barra .idiomas { margin-left: auto; }
+    .portada .ancho { grid-template-columns: 1fr; gap: 40px; padding-top: 46px; padding-bottom: 58px; }
+    .portada h1 img { width: min(100%, 360px); }
+    .credenciales ul, .dos, .videos, .disco, .citas, .sono, .historia, .tarjetas, .integrantes { grid-template-columns: minmax(0, 1fr); }
+    .dos, .disco, .historia { gap: 32px; }
+    .disco .tapa { max-width: 420px; }
+    .historia .marco { max-width: 330px; }
+    .integrantes { max-width: 440px; }
+    .galeria { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    section.bloque { padding: 56px 0; }
+    .contacto { padding: 52px 0 54px; }
+    .cita.grande { padding: 26px 24px 22px; }
+    details.temas ol { padding-left: 46px; }
+    .marco, .oscuro .marco, .galeria a, .cita, details.temas { box-shadow: 5px 5px 0 var(--tinta); }
+    .oscuro .marco { box-shadow: 5px 5px 0 var(--terracota); }
+    .marco, .galeria a, .cita, details.temas { margin-right: 5px; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+</style>
+</head>
+<body>
+
+<header class="barra">
+  <div class="ancho">
+    <a class="nombre" href="#inicio">Trio Tikismikis</a>
+    <nav aria-label="Secciones">
+      <a href="#concierto" data-t="n-concierto">El concierto</a>
+      <a href="#videos" data-t="n-videos">Videos</a>
+      <a href="#disco" data-t="n-disco">Disco</a>
+      <a href="#trio" data-t="n-trio">El trío</a>
+      <a href="#prensa" data-t="n-prensa">Prensa</a>
+      <a href="#fotos" data-t="n-fotos">Fotos</a>
+      <a href="#contacto" data-t="n-contacto">Contacto</a>
+    </nav>
+    <div class="idiomas" role="group" aria-label="Idioma / Langue / Language">
+      <button type="button" data-idioma="es" aria-pressed="true">ES</button>
+      <button type="button" data-idioma="fr" aria-pressed="false">FR</button>
+      <button type="button" data-idioma="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+  <div class="wiphala" aria-hidden="true"></div>
+</header>
+
+<main>
+
+<!-- ============ PORTADA ============ -->
+<section class="portada oscuro" id="inicio">
+  <div class="ancho">
+    <div class="texto">
+      <p class="sobre" data-t="p-sobre">Folclore argentino de raíz</p>
+      <h1><img src="fotos/logo-recorte.jpg" alt="Trio Tikismikis" width="871" height="416"></h1>
+      <p class="bajada" data-t="p-bajada">El trío franco-argentino de Toulouse. Canciones propias y repertorio popular que cantan la tierra, la memoria y la justicia social.</p>
+      <div class="botones">
+        <a class="btn ocre" href="https://www.youtube.com/watch?v=sqgZeteeK74" target="_blank" rel="noopener" data-t="p-btn1">▶ Ver el teaser</a>
+        <a class="btn linea" href="https://lnk.to/1TB9EG" target="_blank" rel="noopener" data-t="p-btn2">Escuchar el disco</a>
+      </div>
+    </div>
+    <div class="foto marco"><img src="fotos/tikis-15.jpg" alt="Luciano Luna con el bombo legüero, Chloé Bousquet con el violín y Marco Grancelli con la guitarra al hombro" width="1600" height="1067"></div>
+  </div>
+</section>
+<div class="guarda" aria-hidden="true"></div>
+
+<div class="credenciales">
+  <div class="ancho">
+    <ul>
+      <li><b data-t="c-1a">Festivales de Europa</b><span data-t="c-1b">Ludwigsburg (Alemania), INNtöne (Austria), Lūznava (Letonia)</span></li>
+      <li><b data-t="c-2a">Radio Nacional de España</b><span data-t="c-2b">Mil Mundos, en Radio 5, presentó al trío y su disco</span></li>
+      <li><b data-t="c-3a">UK Jazz News</b><span data-t="c-3b">«A tour de force», sobre el concierto en INNtöne</span></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============ EL CONCIERTO ============ -->
+<section class="bloque f-crema" id="concierto">
+  <div class="ancho">
+    <h2 data-t="co-h">El concierto</h2>
+    <p class="entrada" data-t="co-entrada">Una música profundamente arraigada, viva y militante.</p>
+    <div class="dos">
+      <div class="largo">
+        <p data-t="co-p1">El trío mezcla composiciones propias con repertorio popular argentino: chacareras, zambas, gatos, bailecitos, vidalas y huaynos, a tres voces y con cinco instrumentos.</p>
+        <p data-t="co-p2">Sus canciones nombran a quienes rara vez tienen canción: los cosecheros de la yerba mate, el movimiento campesino que defiende el monte, el albañil que sale en bicicleta antes del amanecer. Y cantan también el amor, el viaje y la memoria.</p>
+        <p data-t="co-p3">Es música para escuchar de cerca y, cuando llega la chacarera, para bailar.</p>
+        <p class="escena"><span data-t="co-i1">Voces</span> <i>◆</i> <span data-t="co-i2">Guitarra</span> <i>◆</i> <span data-t="co-i3">Bombo legüero</span> <i>◆</i> <span data-t="co-i4">Bandoneón</span> <i>◆</i> <span data-t="co-i5">Violín</span></p>
+      </div>
+      <div class="marco"><img src="fotos/tikis-56.jpg" alt="Los tres de perfil, con la guitarra, el bombo legüero y el violín" width="1600" height="1600" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VIDEOS ============ -->
+<div class="guarda" aria-hidden="true"></div>
+<section class="bloque f-tierra oscuro" id="videos">
+  <div class="ancho">
+    <h2 data-t="v-h" style="margin-bottom:32px">Videos</h2>
+    <div class="videos">
+      <figure class="video grande">
+        <div class="marco pantalla"><button type="button" data-yt="sqgZeteeK74" aria-label="Teaser"></button></div>
+        <figcaption><span data-t="v-1">Teaser: en vivo en el Festival Convivencia</span> <a href="https://www.youtube.com/watch?v=sqgZeteeK74" target="_blank" rel="noopener">YouTube ↗</a></figcaption>
+      </figure>
+      <figure class="video">
+        <div class="marco pantalla"><button type="button" data-yt="aEJOkYBiUp8" aria-label="La loca"></button></div>
+        <figcaption><span data-t="v-2">«La loca»</span> <a href="https://www.youtube.com/watch?v=aEJOkYBiUp8" target="_blank" rel="noopener">YouTube ↗</a></figcaption>
+      </figure>
+      <figure class="video">
+        <div class="marco pantalla"><button type="button" data-yt="HM4sdqpMCWc" aria-label="Gatito del dulce amor"></button></div>
+        <figcaption><span data-t="v-3">«Gatito del dulce amor»</span> <a href="https://www.youtube.com/watch?v=HM4sdqpMCWc" target="_blank" rel="noopener">YouTube ↗</a></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DISCO ============ -->
+<div class="guarda" aria-hidden="true"></div>
+<section class="bloque f-ocre" id="disco">
+  <div class="ancho">
+    <div class="disco">
+      <div class="marco tapa"><img src="fotos/tapa-pedaleando-suenos.jpg" alt="Tapa del disco Pedaleando Sueños: los tres músicos en una bicicleta de tres asientos, con sus instrumentos, bajo un sol de espirales" width="1200" height="1194" loading="lazy"></div>
+      <div>
+        <p class="ficha" data-t="d-ficha">Primer disco · septiembre de 2026 · 15 canciones</p>
+        <h2>Pedaleando Sueños</h2>
+        <p data-t="d-p1">Dos años de trabajo entre composiciones propias y clásicos del folclore argentino. Las canciones dan voz a los trabajadores, los campesinos, los exiliados, los enamorados y a todos los que siguen avanzando, impulsados por sus sueños.</p>
+        <p data-t="d-p2">La chacarera que le da nombre es un homenaje a quienes salen a pedalear cada mañana para ganarse el pan. El disco entero es una invitación a caminar juntos, a pedalear despacio pero con convicción.</p>
+        <p class="creditos" data-t="d-cred">Pintura de la tapa: Dolores Mendieta · Sello: KBKC Artistes · Distribución: Inouïe Distribution</p>
+        <div class="botones">
+          <a class="btn tinta" href="https://lnk.to/1TB9EG" target="_blank" rel="noopener" data-t="d-btn1">▶ Escuchar el disco</a>
+          <a class="btn hueso" href="https://cdetvinyle.fr/products/pedaleando-suenos-trio-tikismikis-album-cd" target="_blank" rel="noopener" data-t="d-btn2">Comprar el CD</a>
+          <a class="btn hueso" href="https://www.dropbox.com/scl/fo/tbgj56lqidp79h4ehk6x1/APYVs0fL7rSC1xB3QO_3Z9k?rlkey=lqq9p9zpkke8i9icsvldv3lse&amp;dl=0" target="_blank" rel="noopener">Press kit</a>
+        </div>
+      </div>
+    </div>
+
+    <details class="temas">
+      <summary data-t="d-temas">Las 15 canciones</summary>
+      <ol>
+        <li>Pedaleando sueños <span>José Vezzosi · Luciano Luna</span></li>
+        <li>Mate de amores <span>Luciano Luna · Marco Grancelli</span></li>
+        <li>Gatito del dulce amor <span>Cuti Carabajal · Osvaldo Valles</span></li>
+        <li>Mishqui imillita <span>Marco Grancelli</span></li>
+        <li>La loca <span>Andrés Chazarreta</span></li>
+        <li>La ley del picotazo <span>Marco Grancelli</span></li>
+        <li>Danza de Supay <span>Marco Grancelli</span></li>
+        <li>Verdes arreboles <span>Violeta Jarero · Marco Grancelli</span></li>
+        <li>Gatito de Tchaikovsky <span>Hermanos Ábalos</span></li>
+        <li>Vidala sin monte <span>Roberto Cantos</span></li>
+        <li>La vieja <span>Hermanos Díaz</span></li>
+        <li>Coplas al caminante <span>Luciano Luna</span></li>
+        <li>Tejiendo puentes <span>Luciano Luna · Lucas Rodríguez</span></li>
+        <li>La humanista <span>Fidel Habra · Luciano Luna</span></li>
+        <li>La Humilde <span>Julián «Cachilo» Díaz</span></li>
+      </ol>
+      <p class="invitados" data-t="d-inv">Con Cristian «Mono» Banegas (bajo), Violeta Jarero (voz), Erkki Nylund (charango), Juan Herrera (percusión) y Pablo Murgier (piano).</p>
+    </details>
+  </div>
+</section>
+
+<!-- ============ EL TRÍO ============ -->
+<div class="guarda" aria-hidden="true"></div>
+<section class="bloque f-crema" id="trio">
+  <div class="ancho">
+    <h2 data-t="t-h">El trío</h2>
+    <div class="historia" style="margin-top:28px">
+      <div>
+        <p data-t="t-p1">El Trío Tikismikis nació en Toulouse, del encuentro de tres músicos en torno al folclore argentino. Luciano Luna y Marco Grancelli, multiinstrumentistas argentinos, y la violinista franco-española Chloé Bousquet unen sus voces y sus instrumentos para hacer dialogar tradición y creación.</p>
+        <p data-t="t-p2">Componen, arreglan e interpretan con un compromiso fuerte con su pueblo y sus raíces: justicia social, solidaridad y memoria colectiva. Y con el deseo de tender puentes entre Argentina y Francia, dando a conocer un repertorio poco difundido en Europa.</p>
+        <p data-t="t-p3">En 2026 publicaron «Pedaleando Sueños», su primer disco, y lo llevaron a escenarios de Francia, Alemania, Austria, Suiza y Letonia.</p>
+      </div>
+      <div class="marco"><img src="fotos/tapa-bici.jpg" alt="Detalle de la tapa: los tres músicos pintados sobre la bicicleta, con la bandera de Pedaleando Sueños" width="1227" height="1400" loading="lazy"></div>
+    </div>
+
+    <div class="integrantes">
+      <article class="integrante marco">
+        <img src="fotos/tikis-64.jpg" alt="Marco Grancelli" width="1600" height="1600" loading="lazy">
+        <div class="cuerpo">
+          <h3>Marco Grancelli</h3>
+          <p class="toca" data-t="i-1a">Voz, guitarras, composición y arreglos</p>
+          <p data-t="i-1b">Argentino, de Buenos Aires. Fue parte del dúo Aguamadera, con el que tocó en el showcase oficial de WOMEX 2022. Aprendió el folclore de primera mano, viajando por Perú, Chile y el Norte argentino. En 2025 publicó «Camino Trunco», su primer disco solista.</p>
+          <p class="mas"><a href="https://www.marcograncelli.com/" target="_blank" rel="noopener">marcograncelli.com ↗</a> <a href="https://www.instagram.com/marcograncelli/" target="_blank" rel="noopener">Instagram ↗</a></p>
+        </div>
+      </article>
+      <article class="integrante marco">
+        <img src="fotos/tikis-26.jpg" alt="Luciano Luna" width="1600" height="1600" loading="lazy">
+        <div class="cuerpo">
+          <h3>Luciano Luna</h3>
+          <p class="toca" data-t="i-2a">Voz, bombo legüero, bandoneón, composición y arreglos</p>
+          <p data-t="i-2b">Santiagueño. Músico, bailarín y docente, se formó en Santiago del Estero y giró diez años como bailarín con el Ballet Folklórico Latinoamericano. Con el grupo Tanta grabó dos discos y recorrió Argentina y Latinoamérica. Vive en Francia desde 2017. Suyas son varias canciones del disco, entre ellas «Coplas al caminante» y, junto a José Vezzosi, la que le da nombre.</p>
+          <p class="mas"><a href="https://www.instagram.com/lucianoluna_musico/" target="_blank" rel="noopener">Instagram ↗</a></p>
+        </div>
+      </article>
+      <article class="integrante marco">
+        <img src="fotos/tikis-35.jpg" alt="Chloé Bousquet" width="1600" height="1600" loading="lazy">
+        <div class="cuerpo">
+          <h3>Chloé Bousquet</h3>
+          <p class="toca" data-t="i-3a">Violín y coros</p>
+          <p data-t="i-3b">Violinista franco-española. Se formó en los conservatorios de Toulouse y Montauban y estudió musicología en la Universidad de Toulouse, donde nació su afinidad con la música latinoamericana. Apasionada del tango argentino, cofundó el Trio Cafetín y La Serenata Milonguera, y tocó con la Gran Típica París y la orquesta Silbando.</p>
+          <p class="mas"><a href="https://www.instagram.com/chloebousquetviolon/" target="_blank" rel="noopener">Instagram ↗</a></p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRENSA ============ -->
+<div class="guarda" aria-hidden="true"></div>
+<section class="bloque f-petroleo oscuro" id="prensa">
+  <div class="ancho">
+    <h2 data-t="pr-h">Prensa</h2>
+    <p class="entrada" data-t="pr-entrada">Lo que dicen los medios.</p>
+
+    <div class="citas">
+      <blockquote class="cita grande">
+        <p lang="en">«…delivered a tour de force, which seemed a long way from the tango.»</p>
+        <footer><b>UK Jazz News</b> · <span data-t="pr-c1">Reino Unido, septiembre de 2026, sobre el concierto en el festival INNtöne</span> · <a href="https://ukjazznews.com/inntone-jazzfestival-2026/" target="_blank" rel="noopener" data-t="pr-leer2">leer la reseña ↗</a></footer>
+      </blockquote>
+      <blockquote class="cita">
+        <p lang="fr">«La formation porte un folklore argentin vivant.»</p>
+        <footer><b>Unidivers</b> · <span data-t="pr-c2">Francia, junio de 2026</span> · <a href="https://unidivers.fr/les-meridiennes-tours-2026/" target="_blank" rel="noopener" data-t="pr-leer">leer la nota ↗</a></footer>
+      </blockquote>
+      <blockquote class="cita">
+        <p lang="de">«Mit den naheliegenden Tango-Erwartungen hatte das nur wenig zu tun.»</p>
+        <footer><b>concerto</b> · <span data-t="pr-c3">Austria, septiembre de 2026: «poco tenía que ver con el tango que uno esperaría»</span> · <a href="https://www.concerto.at/inntoene-jazzfestival/" target="_blank" rel="noopener" data-t="pr-leer2">leer la reseña ↗</a></footer>
+      </blockquote>
+      <blockquote class="cita">
+        <p lang="fr">«…ces musiciens-chercheurs partageront avec vous le fruit de leurs études.»</p>
+        <footer><b>Le Journal du Gers</b> · <span data-t="pr-c4">Francia, agosto de 2026</span> · <a href="https://lejournaldugers.fr/article/93502-voyage-en-argentine-samedi-22-aout-a-la-vieille-eglise-de-saint-clar" target="_blank" rel="noopener" data-t="pr-leer">leer la nota ↗</a></footer>
+      </blockquote>
+      <blockquote class="cita">
+        <p lang="de">«Feurig beginnt der Samstag mit Tikismikis.»</p>
+        <footer><b>mica · music austria</b> · <span data-t="pr-c5">Austria, julio de 2026: «el sábado arranca con fuego, con Tikismikis»</span> · <a href="https://www.musicaustria.at/inntoene-2026-jazz-am-bauernhof/" target="_blank" rel="noopener" data-t="pr-leer">leer la nota ↗</a></footer>
+      </blockquote>
+    </div>
+
+    <div class="sono">
+      <h3 data-t="pr-sono">También en</h3>
+      <ul>
+        <li><a href="https://www.rtve.es/play/audios/mil-mundos-en-radio-5/mil-mundos-radio-5-trio-tikismikis/17228832/" target="_blank" rel="noopener"><b>Radio 5 · Radio Nacional de España</b><span data-t="pr-s1">Mil Mundos, programa sobre el trío y «Pedaleando Sueños»</span></a></li>
+        <li><a href="https://www.ivoox.com/mundofonias-2026-63-el-regalo-del-colibri-the-audios-mp3_rf_180417603_1.html" target="_blank" rel="noopener"><b>Mundofonías</b><span data-t="pr-s2">España · sonó «La vieja»</span></a></li>
+      </ul>
+      <ul>
+        <li><a href="https://www.elliberal.com.ar/nota/90319/2026/09/musico-santiagueno-con-tikismikis-sigue-pedaleando-suenos-en-francia" target="_blank" rel="noopener"><b>El Liberal</b><span data-t="pr-s3">Santiago del Estero, Argentina · nota sobre el disco</span></a></li>
+        <li><a href="https://www.petiterepublique.com/2026/04/09/marignac-lasclares-la-musique-traditionnelle-argentine-avec-le-trio-tikismikis-a-clarijazz/" target="_blank" rel="noopener"><b>Petite République</b><span data-t="pr-s4">Francia · nota sobre el trío</span></a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOTOS ============ -->
+<div class="guarda" aria-hidden="true"></div>
+<section class="bloque f-papel" id="fotos">
+  <div class="ancho">
+    <h2 data-t="f-h" style="margin-bottom:32px">Fotos</h2>
+    <div class="galeria">
+      <a href="fotos/tikis-61.jpg" target="_blank"><img src="fotos/tikis-61.jpg" alt="El trío alrededor de un sillón de cuero, con el bombo legüero adelante" width="1600" height="1600" loading="lazy"></a>
+      <a href="fotos/tikis-45.jpg" target="_blank"><img src="fotos/tikis-45.jpg" alt="Chloé Bousquet, Luciano Luna y Marco Grancelli con sus instrumentos" width="1600" height="1600" loading="lazy"></a>
+      <a href="fotos/tikis-56.jpg" target="_blank"><img src="fotos/tikis-56.jpg" alt="Los tres de perfil, con la guitarra, el bombo legüero y el violín" width="1600" height="1600" loading="lazy"></a>
+      <a class="ancha" href="fotos/tikis-15.jpg" target="_blank"><img src="fotos/tikis-15.jpg" alt="Luciano Luna, Chloé Bousquet y Marco Grancelli sobre fondo rojo y negro" width="1600" height="1067" loading="lazy"></a>
+      <a href="fotos/tikis-46.jpg" target="_blank"><img src="fotos/tikis-46.jpg" alt="Marco Grancelli, Luciano Luna y Chloé Bousquet con la guitarra, el bombo y el violín" width="1600" height="1600" loading="lazy"></a>
+    </div>
+    <p class="nota" data-t="f-nota">Fotos: Lionel Pesqué.</p>
+  </div>
+</section>
+
+<!-- ============ CONTACTO ============ -->
+<div class="guarda" aria-hidden="true"></div>
+<section class="contacto f-tinta oscuro" id="contacto">
+  <div class="ancho">
+    <h2 data-t="k-h">Contacto</h2>
+    <div class="tarjetas">
+      <div class="tarjeta">
+        <h3 data-t="k-1">Booking</h3>
+        <p class="quien">KBKC Artistes</p>
+        <p>Téo · <a href="tel:+33633497643">+33 (0)6 33 49 76 43</a></p>
+        <p><a href="mailto:booking@kbkc-artistes.com">booking@kbkc-artistes.com</a></p>
+        <p><a href="https://www.kbkc-artistes.com/tikismikis" target="_blank" rel="noopener">www.kbkc-artistes.com/tikismikis ↗</a></p>
+      </div>
+      <div class="tarjeta">
+        <h3 data-t="k-2">El trío</h3>
+        <p class="quien">Trio Tikismikis</p>
+        <p><a href="mailto:contact@triotikismikis.com">contact@triotikismikis.com</a></p>
+      </div>
+    </div>
+    <div class="redes">
+      <a href="https://www.instagram.com/trio.tikismikis/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/triotikismikis" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://open.spotify.com/album/13yoB55w9qnubZdIIhYPCV" target="_blank" rel="noopener">Spotify</a>
+      <a href="https://www.youtube.com/watch?v=sqgZeteeK74" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://www.dropbox.com/scl/fo/tbgj56lqidp79h4ehk6x1/APYVs0fL7rSC1xB3QO_3Z9k?rlkey=lqq9p9zpkke8i9icsvldv3lse&amp;dl=0" target="_blank" rel="noopener">Press kit</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div class="wiphala" aria-hidden="true"></div>
+<footer class="pie">
+  <div class="ancho">
+    <span>© 2026 Trio Tikismikis</span>
+    <span data-t="pie-tapa">Pintura de la tapa: Dolores Mendieta. Fotos: Lionel Pesqué. Todos los derechos reservados.</span>
+  </div>
+</footer>
+
+<script>
+/* TEXTOS: clave, francés, inglés. El castellano es el que está escrito en la página. */
+var TEXTOS = {
+  "n-concierto": ["Le concert", "The concert"],
+  "n-videos": ["Vidéos", "Videos"],
+  "n-disco": ["Album", "Album"],
+  "n-trio": ["Le trio", "The trio"],
+  "n-prensa": ["Presse", "Press"],
+  "n-fotos": ["Photos", "Photos"],
+  "n-contacto": ["Contact", "Contact"],
+
+  "p-sobre": ["Folklore argentin, à la racine", "Argentine roots folk"],
+  "p-bajada": ["Le trio franco-argentin de Toulouse. Des chansons originales et un répertoire populaire qui chantent la terre, la mémoire et la justice sociale.",
+               "The Franco-Argentine trio from Toulouse. Original songs and popular repertoire that sing of the land, of memory and of social justice."],
+  "p-btn1": ["▶ Voir le teaser", "▶ Watch the teaser"],
+  "p-btn2": ["Écouter l'album", "Listen to the album"],
+
+  "c-1a": ["Festivals d'Europe", "European festivals"],
+  "c-1b": ["Ludwigsburg (Allemagne), INNtöne (Autriche), Lūznava (Lettonie)", "Ludwigsburg (Germany), INNtöne (Austria), Lūznava (Latvia)"],
+  "c-2a": ["Radio Nacional de España", "Radio Nacional de España"],
+  "c-2b": ["Mil Mundos, sur Radio 5, a présenté le trio et son album", "Mil Mundos, on Radio 5, presented the trio and its album"],
+  "c-3a": ["UK Jazz News", "UK Jazz News"],
+  "c-3b": ["« A tour de force », à propos du concert à INNtöne", "“A tour de force”, on the concert at INNtöne"],
+
+  "co-h": ["Le concert", "The concert"],
+  "co-entrada": ["Une musique profondément enracinée, vivante et militante.", "Music that is deeply rooted, alive and militant."],
+  "co-p1": ["Le trio mêle ses compositions au répertoire populaire argentin : chacareras, zambas, gatos, bailecitos, vidalas et huaynos, à trois voix et avec cinq instruments.",
+            "The trio blends its own compositions with Argentine popular repertoire: chacareras, zambas, gatos, bailecitos, vidalas and huaynos, for three voices and five instruments."],
+  "co-p2": ["Ses chansons nomment celles et ceux qui ont rarement leur chanson : les cueilleurs de yerba mate, le mouvement paysan qui défend la forêt, le maçon qui part à vélo avant l'aube. Elles chantent aussi l'amour, le voyage et la mémoire.",
+            "Its songs name those who rarely get a song: the yerba mate harvesters, the peasant movement defending the forest, the bricklayer who sets off by bike before dawn. They also sing of love, travel and memory."],
+  "co-p3": ["Une musique à écouter de près et, quand vient la chacarera, à danser.", "Music to be listened to closely and, when the chacarera comes, danced to."],
+  "co-i1": ["Voix", "Voices"],
+  "co-i2": ["Guitare", "Guitar"],
+  "co-i3": ["Bombo legüero", "Bombo legüero"],
+  "co-i4": ["Bandonéon", "Bandoneon"],
+  "co-i5": ["Violon", "Violin"],
+
+  "v-h": ["Vidéos", "Videos"],
+  "v-1": ["Teaser : en live au Festival Convivencia", "Teaser: live at Festival Convivencia"],
+  "v-2": ["« La loca »", "“La loca”"],
+  "v-3": ["« Gatito del dulce amor »", "“Gatito del dulce amor”"],
+
+  "d-ficha": ["Premier album · septembre 2026 · 15 titres", "First album · September 2026 · 15 tracks"],
+  "d-p1": ["Deux ans de travail entre compositions originales et classiques du folklore argentin. Les chansons donnent voix aux travailleurs, aux paysans, aux exilés, aux amoureux et à celles et ceux qui continuent d'avancer, portés par leurs rêves.",
+           "Two years of work between original compositions and classics of Argentine folk music. The songs give voice to workers, peasants, exiles, lovers and all those who keep moving forward, carried by their dreams."],
+  "d-p2": ["La chacarera qui donne son nom à l'album rend hommage à celles et ceux qui partent pédaler chaque matin pour gagner leur pain. Le disque entier est une invitation à cheminer ensemble, à pédaler lentement mais avec conviction.",
+           "The chacarera that gives the album its name pays tribute to those who set off pedalling every morning to earn their bread. The whole record is an invitation to journey together, to pedal slowly but with conviction."],
+  "d-cred": ["Peinture de la pochette : Dolores Mendieta · Label : KBKC Artistes · Distribution : Inouïe Distribution",
+             "Cover painting: Dolores Mendieta · Label: KBKC Artistes · Distribution: Inouïe Distribution"],
+  "d-btn1": ["▶ Écouter l'album", "▶ Listen to the album"],
+  "d-btn2": ["Acheter le CD", "Buy the CD"],
+  "d-temas": ["Les 15 titres", "The 15 tracks"],
+  "d-inv": ["Avec Cristian « Mono » Banegas (basse), Violeta Jarero (voix), Erkki Nylund (charango), Juan Herrera (percussions) et Pablo Murgier (piano).",
+            "With Cristian “Mono” Banegas (bass), Violeta Jarero (vocals), Erkki Nylund (charango), Juan Herrera (percussion) and Pablo Murgier (piano)."],
+
+  "t-h": ["Le trio", "The trio"],
+  "t-p1": ["Le Trio Tikismikis est né à Toulouse, de la rencontre de trois musiciens autour du folklore argentin. Luciano Luna et Marco Grancelli, multi-instrumentistes argentins, et la violoniste franco-espagnole Chloé Bousquet unissent leurs voix et leurs instruments pour faire dialoguer tradition et création.",
+           "Trio Tikismikis was born in Toulouse, when three musicians met around Argentine folk music. Luciano Luna and Marco Grancelli, Argentine multi-instrumentalists, and Franco-Spanish violinist Chloé Bousquet bring their voices and instruments together in a dialogue between tradition and creation."],
+  "t-p2": ["Ils composent, arrangent et interprètent avec un engagement fort envers leur peuple et leurs racines : justice sociale, solidarité et mémoire collective. Et avec le désir de créer des ponts entre l'Argentine et la France, en faisant connaître un répertoire peu diffusé en Europe.",
+           "They compose, arrange and perform with a strong commitment to their people and their roots: social justice, solidarity and collective memory. And with the wish to build bridges between Argentina and France, sharing a repertoire rarely heard in Europe."],
+  "t-p3": ["En 2026, ils ont sorti « Pedaleando Sueños », leur premier album, et l'ont porté sur des scènes de France, d'Allemagne, d'Autriche, de Suisse et de Lettonie.",
+           "In 2026 they released “Pedaleando Sueños”, their first album, and took it to stages in France, Germany, Austria, Switzerland and Latvia."],
+  "i-1a": ["Voix, guitares, composition et arrangements", "Vocals, guitars, composition and arrangements"],
+  "i-1b": ["Argentin, de Buenos Aires. Il a fait partie du duo Aguamadera, avec lequel il a joué en showcase officiel au WOMEX 2022. Il a appris le folklore à la source, en voyageant au Pérou, au Chili et dans le Nord argentin. En 2025, il a sorti « Camino Trunco », son premier album solo.",
+           "Argentine, from Buenos Aires. He was part of the duo Aguamadera, with which he played an official showcase at WOMEX 2022. He learned folk music first-hand, travelling through Peru, Chile and northern Argentina. In 2025 he released “Camino Trunco”, his first solo album."],
+  "i-2a": ["Voix, bombo legüero, bandonéon, composition et arrangements", "Vocals, bombo legüero, bandoneon, composition and arrangements"],
+  "i-2b": ["Originaire de Santiago del Estero. Musicien, danseur et enseignant, il s'y est formé et a tourné dix ans comme danseur avec le Ballet Folklórico Latinoamericano. Avec le groupe Tanta, il a enregistré deux albums et parcouru l'Argentine et l'Amérique latine. Il vit en France depuis 2017. Plusieurs chansons de l'album sont de lui, dont « Coplas al caminante » et, avec José Vezzosi, celle qui lui donne son nom.",
+           "From Santiago del Estero. A musician, dancer and teacher, he trained there and toured for ten years as a dancer with the Ballet Folklórico Latinoamericano. With the group Tanta he recorded two albums and travelled across Argentina and Latin America. He has lived in France since 2017. Several songs on the album are his, among them “Coplas al caminante” and, with José Vezzosi, the title track."],
+  "i-3a": ["Violon et chœurs", "Violin and backing vocals"],
+  "i-3b": ["Violoniste franco-espagnole. Formée aux conservatoires de Toulouse et de Montauban, elle a étudié la musicologie à l'Université de Toulouse, où est née son affinité avec les musiques d'Amérique latine. Passionnée de tango argentin, elle a cofondé le Trio Cafetín et La Serenata Milonguera, et a joué avec la Gran Típica París et l'orchestre Silbando.",
+           "Franco-Spanish violinist. She trained at the conservatoires of Toulouse and Montauban and studied musicology at the University of Toulouse, where her affinity with Latin American music began. Passionate about Argentine tango, she co-founded Trio Cafetín and La Serenata Milonguera, and has played with Gran Típica París and the Silbando orchestra."],
+
+  "pr-h": ["Presse", "Press"],
+  "pr-entrada": ["Ce qu'en disent les médias.", "What the media say."],
+  "pr-c1": ["Royaume-Uni, septembre 2026, à propos du concert au festival INNtöne", "United Kingdom, September 2026, on the concert at the INNtöne festival"],
+  "pr-c2": ["France, juin 2026", "France, June 2026"],
+  "pr-c3": ["Autriche, septembre 2026 : « cela n'avait pas grand-chose à voir avec le tango auquel on s'attendrait »", "Austria, September 2026: “it had little to do with the tango one might expect”"],
+  "pr-c4": ["France, août 2026", "France, August 2026"],
+  "pr-c5": ["Autriche, juillet 2026 : « le samedi démarre avec fougue, avec Tikismikis »", "Austria, July 2026: “Saturday gets off to a fiery start with Tikismikis”"],
+  "pr-leer": ["lire l'article ↗", "read the article ↗"],
+  "pr-leer2": ["lire la chronique ↗", "read the review ↗"],
+  "pr-sono": ["Aussi dans", "Also in"],
+  "pr-s1": ["Mil Mundos, émission sur le trio et « Pedaleando Sueños »", "Mil Mundos, a programme on the trio and “Pedaleando Sueños”"],
+  "pr-s2": ["Espagne · diffusion de « La vieja »", "Spain · played “La vieja”"],
+  "pr-s3": ["Santiago del Estero, Argentine · article sur l'album", "Santiago del Estero, Argentina · article about the album"],
+  "pr-s4": ["France · article sur le trio", "France · article about the trio"],
+
+  "f-h": ["Photos", "Photos"],
+  "f-nota": ["Photos : Lionel Pesqué.", "Photos: Lionel Pesqué."],
+
+  "k-h": ["Contact", "Contact"],
+  "k-1": ["Booking", "Booking"],
+  "k-2": ["Le trio", "The trio"],
+  "pie-tapa": ["Peinture de la pochette : Dolores Mendieta. Photos : Lionel Pesqué. Tous droits réservés.", "Cover painting: Dolores Mendieta. Photos: Lionel Pesqué. All rights reserved."]
+};
+
+(function () {
+  var nodos = Array.prototype.slice.call(document.querySelectorAll('[data-t]'));
+  nodos.forEach(function (n) { n.setAttribute('data-es', n.innerHTML); });
+  var botones = Array.prototype.slice.call(document.querySelectorAll('.idiomas button'));
+  var titulos = {
+    es: 'Trío Tikismikis · Folclore argentino',
+    fr: 'Trio Tikismikis · Folklore argentin',
+    en: 'Trio Tikismikis · Argentine folk music'
+  };
+  function poner(idioma) {
+    var i = idioma === 'fr' ? 0 : 1;
+    nodos.forEach(function (n) {
+      var par = TEXTOS[n.getAttribute('data-t')];
+      var texto = (idioma === 'es' || !par) ? n.getAttribute('data-es') : par[i];
+      /* en francés, los dos puntos y las comillas no quedan solos al cortar el renglón */
+      if (idioma === 'fr') texto = texto.replace(/ :/g, ' :').replace(/« /g, '« ').replace(/ »/g, ' »');
+      n.innerHTML = texto;
+    });
+    document.documentElement.lang = idioma;
+    document.title = titulos[idioma];
+    botones.forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-idioma') === idioma)); });
+    try { localStorage.setItem('idioma', idioma); } catch (e) {}
+  }
+  botones.forEach(function (b) { b.addEventListener('click', function () { poner(b.getAttribute('data-idioma')); }); });
+  var guardado = null;
+  try { guardado = localStorage.getItem('idioma'); } catch (e) {}
+  var nav = (navigator.language || 'es').slice(0, 2).toLowerCase();
+  var inicial = guardado || (nav === 'es' || nav === 'fr' ? nav : (nav === 'ca' || nav === 'gl' ? 'es' : 'en'));
+  if (inicial !== 'es') poner(inicial);
+
+  /* videos: se ve la imagen y recién al tocar se carga YouTube */
+  Array.prototype.forEach.call(document.querySelectorAll('.pantalla button'), function (b) {
+    var id = b.getAttribute('data-yt');
+    b.style.backgroundImage = 'url(https://img.youtube.com/vi/' + id + '/maxresdefault.jpg), url(https://img.youtube.com/vi/' + id + '/hqdefault.jpg)';
+    b.addEventListener('click', function () {
+      if (location.protocol === 'file:') { window.open('https://www.youtube.com/watch?v=' + id, '_blank'); return; }
+      var f = document.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
+      f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+      f.allowFullscreen = true;
+      f.title = b.getAttribute('aria-label');
+      b.parentNode.replaceChild(f, b);
+    });
+  });
+})();
+</script>
+</body>
+</html>
