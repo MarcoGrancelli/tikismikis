@@ -22,6 +22,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@400;900&family=Alegreya:ital,wght@0,400;0,700;1,400;1,500;1,700&family=Alegreya+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<!-- Estadísticas de visitas (Umami, sin cookies): el mismo código que coplario.com y marcograncelli.com; en el panel se separa con el filtro Hostname. -->
+<script defer src="https://cloud.umami.is/script.js" data-website-id="389c338f-0543-4235-92ae-582fab6ea949" data-domains="www.triotikismikis.com,triotikismikis.com"></script>
+<!-- Aviso de cookies y pixel de Meta (el pixel solo se carga si la persona acepta). -->
+<script src="cookies.js" defer></script>
 <!--
   CÓMO CAMBIAR LOS TEXTOS
   - El castellano está escrito acá abajo, en la página. El francés y el inglés están al final,
@@ -214,6 +218,18 @@
   .redes a:hover { border-color: var(--sol); color: var(--sol); }
   .pie { background: var(--tinta); color: #b9a888; font-size: 14.5px; padding: 18px 0 26px; border-top: 1px solid rgba(246,239,220,.2); }
   .pie .ancho { display: flex; flex-wrap: wrap; gap: 6px 24px; justify-content: space-between; }
+  .pie a { color: #d8c9aa; }
+
+  /* aviso de cookies: chico, abajo a la izquierda; los dos botones iguales */
+  .cookies { position: fixed; left: 16px; bottom: 16px; z-index: 45; max-width: min(400px, calc(100vw - 32px)); background: var(--hueso); color: var(--tinta);
+    border: 2px solid var(--tinta); box-shadow: 3px 3px 0 var(--tinta); padding: 8px 10px;
+    display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; font: 13.5px/1.35 var(--ui); }
+  .cookies p { margin: 0; flex: 1 1 180px; }
+  .cookies a { color: var(--enlace); }
+  .cookies-botones { display: flex; gap: 6px; margin-left: auto; }
+  .cookies-btn { min-height: 30px; padding: 3px 10px; font: 800 13px var(--ui); letter-spacing: .02em; cursor: pointer;
+    background: var(--hueso); color: var(--tinta); border: 2px solid var(--tinta); }
+  .cookies-btn:hover { background: var(--papel); }
 
   @media (max-width: 860px) {
     body { font-size: 17px; }
@@ -515,6 +531,7 @@
   <div class="ancho">
     <span>© 2026 Trio Tikismikis</span>
     <span data-t="pie-tapa">Pintura de la tapa: Dolores Mendieta. Fotos: Lionel Pesqué. Todos los derechos reservados.</span>
+    <a href="privacidad.html" data-t="pie-priv">Privacidad y cookies</a>
   </div>
 </footer>
 
@@ -611,7 +628,8 @@ var TEXTOS = {
   "k-h": ["Contact", "Contact"],
   "k-1": ["Booking", "Booking"],
   "k-2": ["Le trio", "The trio"],
-  "pie-tapa": ["Peinture de la pochette : Dolores Mendieta. Photos : Lionel Pesqué. Tous droits réservés.", "Cover painting: Dolores Mendieta. Photos: Lionel Pesqué. All rights reserved."]
+  "pie-tapa": ["Peinture de la pochette : Dolores Mendieta. Photos : Lionel Pesqué. Tous droits réservés.", "Cover painting: Dolores Mendieta. Photos: Lionel Pesqué. All rights reserved."],
+  "pie-priv": ["Confidentialité et cookies", "Privacy and cookies"]
 };
 
 (function () {

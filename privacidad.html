@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Política de privacidad y cookies · Trio Tikismikis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@400;900&family=Alegreya+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<script defer src="https://cloud.umami.is/script.js" data-website-id="389c338f-0543-4235-92ae-582fab6ea949" data-domains="www.triotikismikis.com,triotikismikis.com"></script>
+<script src="cookies.js" defer></script>
+<!--
+  Página de privacidad. El castellano está escrito acá abajo; el francés y el inglés, en la lista «TEXTOS» del final
+  (clave, francés, inglés), igual que en index.html. Si cambia algo, cambiar también la fecha de «Última actualización».
+-->
+<style>
+  :root {
+    --tinta: #1b120c; --terracota: #b5462a; --ocre: #d49a2c;
+    --crema: #eadbb8; --papel: #f4e9cf; --hueso: #f6efdc; --suave: #5d4a39; --enlace: #9a3418;
+    --titulo: "Londrina Solid", "Arial Black", Impact, sans-serif;
+    --ui: "Alegreya Sans", "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--crema); color: var(--tinta); font: 17px/1.6 var(--ui); }
+  a { color: var(--enlace); text-underline-offset: 3px; }
+  :focus-visible { outline: 3px solid var(--ocre); outline-offset: 3px; }
+  .ancho { max-width: 780px; margin: 0 auto; padding: 0 22px; }
+  .barra { background: var(--tinta); color: #fff; }
+  .barra .ancho { display: flex; align-items: center; gap: 18px; min-height: 56px; max-width: 1120px; }
+  .barra .nombre { font: 900 23px/1 var(--titulo); color: var(--hueso); text-decoration: none; white-space: nowrap; letter-spacing: .05em; text-transform: uppercase; }
+  .idiomas { display: flex; border: 2px solid rgba(246,239,220,.4); margin-left: auto; }
+  .idiomas button { font: 800 13.5px var(--ui); letter-spacing: .06em; background: none; border: 0; color: #d8c9aa; padding: 6px 9px; cursor: pointer; }
+  .idiomas button[aria-pressed="true"] { background: var(--ocre); color: var(--tinta); }
+  main { padding: 40px 0 56px; }
+  h1 { font: 900 clamp(32px, 5.4vw, 44px)/1 var(--titulo); text-transform: uppercase; letter-spacing: .02em; margin: 0 0 8px; }
+  h2 { font: 400 24px/1.15 var(--titulo); text-transform: uppercase; letter-spacing: .03em; margin: 32px 0 8px; }
+  p, ul { margin: 0 0 12px; }
+  ul { padding-left: 20px; }
+  li { margin-bottom: 6px; }
+  .fecha { color: var(--suave); font-size: 15px; }
+  .volver { display: inline-block; margin-bottom: 22px; font-size: 15.5px; }
+  .tabla { overflow-x: auto; margin: 0 0 12px; }
+  table { border-collapse: collapse; width: 100%; font-size: 15.5px; background: var(--hueso); border: 2px solid var(--tinta); }
+  th, td { text-align: left; padding: 7px 10px; border: 1px solid rgba(27,18,12,.35); vertical-align: top; }
+  th { background: var(--papel); }
+  code { font-size: 14.5px; }
+  .botones { display: flex; gap: 8px; flex-wrap: wrap; }
+  .cookies-btn { min-height: 36px; padding: 5px 16px; font: 800 15px var(--ui); letter-spacing: .02em; cursor: pointer;
+    background: var(--hueso); color: var(--tinta); border: 2px solid var(--tinta); }
+  .cookies-btn:hover { background: var(--papel); }
+  .pie { background: var(--tinta); color: #b9a888; font-size: 14.5px; padding: 18px 0 26px; }
+</style>
+</head>
+<body>
+
+<header class="barra">
+  <div class="ancho">
+    <a class="nombre" href="./">Trio Tikismikis</a>
+    <div class="idiomas" role="group" aria-label="Idioma / Langue / Language">
+      <button type="button" data-idioma="es" aria-pressed="true">ES</button>
+      <button type="button" data-idioma="fr" aria-pressed="false">FR</button>
+      <button type="button" data-idioma="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="ancho">
+    <a class="volver" href="./" data-t="volver">← Volver al sitio</a>
+    <h1 data-t="h1">Política de privacidad y cookies</h1>
+    <p class="fecha" data-t="fecha">Última actualización: 19/11/2026</p>
+
+    <h2 data-t="resp-h">Responsable</h2>
+    <p data-t="resp-p">Marco Grancelli. Contacto: <a href="mailto:contact@triotikismikis.com">contact@triotikismikis.com</a>.</p>
+
+    <h2>Cookies</h2>
+    <div class="tabla">
+      <table>
+        <thead><tr><th>Cookie</th><th data-t="th-prov">Proveedor</th><th data-t="th-fin">Finalidad</th><th data-t="th-dur">Duración</th></tr></thead>
+        <tbody>
+          <tr><td><code>_fbp</code></td><td>Meta Platforms Ireland Ltd.</td><td data-t="fin-1">Publicidad</td><td data-t="dur">90 días</td></tr>
+          <tr><td><code>_fbc</code></td><td>Meta Platforms Ireland Ltd.</td><td data-t="fin-2">Publicidad (solo al llegar desde un anuncio)</td><td data-t="dur2">90 días</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p data-t="ck-p">Las cookies de terceros solo se instalan con consentimiento previo. Base legal: consentimiento (art. 6.1.a RGPD). Con el consentimiento, el navegador envía a Meta datos de la visita (página vista, dirección IP, navegador). <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">Política de privacidad de Meta</a>.</p>
+
+    <h2 data-t="ges-h">Gestión del consentimiento</h2>
+    <p data-t="ges-p">La elección se puede cambiar en cualquier momento.</p>
+    <p id="estadoCookies"></p>
+    <div class="botones">
+      <button type="button" class="cookies-btn" data-cookies="no" data-t="b-no">Rechazar</button>
+      <button type="button" class="cookies-btn" data-cookies="si" data-t="b-si">Aceptar</button>
+    </div>
+
+    <h2 data-t="otros-h">Otros datos</h2>
+    <ul>
+      <li data-t="o-1">Almacenamiento local: el sitio guarda en el navegador el idioma elegido y la respuesta al aviso de cookies. No se envían a ningún servidor.</li>
+      <li data-t="o-2">Alojamiento: GitHub Pages (GitHub, Inc.), que registra la dirección IP de cada visita por motivos de seguridad.</li>
+      <li data-t="o-3">Tipografías: Google Fonts (Google), cargadas desde servidores de Google, que reciben la dirección IP.</li>
+      <li data-t="o-4">Videos: las imágenes de los videos se cargan desde YouTube (Google). El reproductor, en modo de privacidad reforzada, se carga solo al tocar un video.</li>
+      <li data-t="o-5">Estadísticas de uso: Umami (Umami Software, Inc.), sin cookies. Registra datos agregados de navegación (páginas vistas, duración de la visita, sitio de procedencia, país, navegador y tipo de dispositivo).</li>
+    </ul>
+
+    <h2 data-t="der-h">Derechos</h2>
+    <p data-t="der-p">Se pueden ejercer los derechos de acceso, rectificación, supresión, oposición, limitación y portabilidad escribiendo a la dirección de contacto. También se puede presentar una reclamación ante la autoridad de protección de datos (en Francia, la CNIL).</p>
+  </div>
+</main>
+
+<footer class="pie">
+  <div class="ancho">© 2026 Trio Tikismikis</div>
+</footer>
+
+<script>
+/* TEXTOS: clave, francés, inglés. El castellano es el que está escrito en la página. */
+var TEXTOS = {
+  "volver": ["← Retour au site", "← Back to the site"],
+  "h1": ["Politique de confidentialité et cookies", "Privacy and cookie policy"],
+  "fecha": ["Dernière mise à jour : 19/11/2026", "Last updated: 19/11/2026"],
+  "resp-h": ["Responsable du traitement", "Data controller"],
+  "resp-p": ["Marco Grancelli. Contact : <a href=\"mailto:contact@triotikismikis.com\">contact@triotikismikis.com</a>.",
+             "Marco Grancelli. Contact: <a href=\"mailto:contact@triotikismikis.com\">contact@triotikismikis.com</a>."],
+  "th-prov": ["Fournisseur", "Provider"],
+  "th-fin": ["Finalité", "Purpose"],
+  "th-dur": ["Durée", "Duration"],
+  "fin-1": ["Publicité", "Advertising"],
+  "fin-2": ["Publicité (uniquement en arrivant depuis une publicité)", "Advertising (only when arriving from an ad)"],
+  "dur": ["90 jours", "90 days"],
+  "dur2": ["90 jours", "90 days"],
+  "ck-p": ["Les cookies tiers ne sont déposés qu'avec un consentement préalable. Base légale : consentement (art. 6.1.a RGPD). Avec le consentement, le navigateur envoie à Meta des données de la visite (page vue, adresse IP, navigateur). <a href=\"https://www.facebook.com/privacy/policy/\" target=\"_blank\" rel=\"noopener\">Politique de confidentialité de Meta</a>.",
+           "Third-party cookies are only set with prior consent. Legal basis: consent (Art. 6(1)(a) GDPR). With consent, the browser sends Meta data about the visit (page viewed, IP address, browser). <a href=\"https://www.facebook.com/privacy/policy/\" target=\"_blank\" rel=\"noopener\">Meta Privacy Policy</a>."],
+  "ges-h": ["Gestion du consentement", "Managing consent"],
+  "ges-p": ["Le choix peut être modifié à tout moment.", "The choice can be changed at any time."],
+  "b-no": ["Refuser", "Reject"],
+  "b-si": ["Accepter", "Accept"],
+  "otros-h": ["Autres données", "Other data"],
+  "o-1": ["Stockage local : le site enregistre dans le navigateur la langue choisie et la réponse à l'avis sur les cookies. Ces données ne sont envoyées à aucun serveur.",
+          "Local storage: the site stores the chosen language and the answer to the cookie notice in the browser. They are not sent to any server."],
+  "o-2": ["Hébergement : GitHub Pages (GitHub, Inc.), qui enregistre l'adresse IP de chaque visite pour des raisons de sécurité.",
+          "Hosting: GitHub Pages (GitHub, Inc.), which logs the IP address of each visit for security purposes."],
+  "o-3": ["Polices : Google Fonts (Google), chargées depuis les serveurs de Google, qui reçoivent l'adresse IP.",
+          "Fonts: Google Fonts (Google), loaded from Google servers, which receive the IP address."],
+  "o-4": ["Vidéos : les images des vidéos sont chargées depuis YouTube (Google). Le lecteur, en mode de confidentialité renforcée, ne se charge qu'en cliquant sur une vidéo.",
+          "Videos: video thumbnails are loaded from YouTube (Google). The player, in privacy-enhanced mode, only loads when a video is clicked."],
+  "o-5": ["Statistiques d'utilisation : Umami (Umami Software, Inc.), sans cookies. Enregistre des données de navigation agrégées (pages vues, durée de la visite, site de provenance, pays, navigateur et type d'appareil).",
+          "Usage statistics: Umami (Umami Software, Inc.), cookie-free. It records aggregated browsing data (pages viewed, visit duration, referring site, country, browser and device type)."],
+  "der-h": ["Droits", "Rights"],
+  "der-p": ["Les droits d'accès, de rectification, d'effacement, d'opposition, de limitation et de portabilité peuvent être exercés en écrivant à l'adresse de contact. Une réclamation peut également être introduite auprès de l'autorité de protection des données (en France, la CNIL).",
+            "The rights of access, rectification, erasure, objection, restriction and portability can be exercised by writing to the contact address. A complaint can also be lodged with the data protection authority (in France, the CNIL)."]
+};
+
+(function () {
+  var nodos = Array.prototype.slice.call(document.querySelectorAll('[data-t]'));
+  nodos.forEach(function (n) { n.setAttribute('data-es', n.innerHTML); });
+  var botones = Array.prototype.slice.call(document.querySelectorAll('.idiomas button'));
+  var titulos = {
+    es: 'Política de privacidad y cookies · Trio Tikismikis',
+    fr: 'Politique de confidentialité et cookies · Trio Tikismikis',
+    en: 'Privacy and cookie policy · Trio Tikismikis'
+  };
+  function poner(idioma) {
+    var i = idioma === 'fr' ? 0 : 1;
+    nodos.forEach(function (n) {
+      var par = TEXTOS[n.getAttribute('data-t')];
+      var texto = (idioma === 'es' || !par) ? n.getAttribute('data-es') : par[i];
+      /* en francés, los dos puntos no quedan solos al cortar el renglón */
+      if (idioma === 'fr') texto = texto.replace(/ :/g, ' :');
+      n.innerHTML = texto;
+    });
+    document.documentElement.lang = idioma;
+    document.title = titulos[idioma];
+    botones.forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-idioma') === idioma)); });
+    try { localStorage.setItem('idioma', idioma); } catch (e) {}
+  }
+  botones.forEach(function (b) { b.addEventListener('click', function () { poner(b.getAttribute('data-idioma')); }); });
+  var guardado = null;
+  try { guardado = localStorage.getItem('idioma'); } catch (e) {}
+  var nav = (navigator.language || 'es').slice(0, 2).toLowerCase();
+  var inicial = guardado || (nav === 'es' || nav === 'fr' ? nav : (nav === 'ca' || nav === 'gl' ? 'es' : 'en'));
+  if (inicial !== 'es') poner(inicial);
+})();
+</script>
+</body>
+</html>
