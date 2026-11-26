@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Trío Tikismikis · Espacio profesional</title>
+<meta name="description" content="Trío Tikismikis: press kit, ficha técnica, videos, fotos y contacto para programadores y prensa.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Trío Tikismikis">
+<meta property="og:url" content="https://www.triotikismikis.com/pro">
+<meta property="og:title" content="Trio Tikismikis · Espace professionnel">
+<meta property="og:description" content="Dossier de presse, fiche technique, vidéos, photos et contact.">
+<meta property="og:image" content="https://www.triotikismikis.com/fotos/vista-previa.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@400;900&family=Alegreya:wght@400;700&family=Alegreya+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<!-- Estadísticas de visitas y descargas (Umami, sin cookies) y aviso de cookies con el pixel de Meta: los mismos del sitio. -->
+<script defer src="https://cloud.umami.is/script.js" data-website-id="389c338f-0543-4235-92ae-582fab6ea949" data-domains="www.triotikismikis.com,triotikismikis.com"></script>
+<script src="cookies.js" defer></script>
+<!--
+  Página para profesionales (www.triotikismikis.com/pro). No se enlaza desde el sitio.
+  - Los archivos para bajar están en la carpeta «descargas». Para cambiar uno, reemplazarlo con el mismo nombre.
+  - El press kit en inglés y en castellano baja desde Drive.
+  - El castellano está escrito en la página; el francés y el inglés, en la lista «TEXTOS» del final.
+-->
+<style>
+  :root {
+    --tinta:#1b120c; --borgona:#6e1f2c; --petroleo:#173f47; --terracota:#b5462a; --ocre:#d49a2c; --sol:#edb93a;
+    --crema:#eadbb8; --papel:#f4e9cf; --hueso:#f6efdc; --suave:#5d4a39;
+    --titulo:"Londrina Solid","Arial Black",Impact,sans-serif; --verso:"Alegreya","Palatino Linotype",Georgia,serif;
+    --ui:"Alegreya Sans","Segoe UI",system-ui,sans-serif; --trazo:3px solid var(--tinta);
+    --chakana:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath fill-rule='evenodd' d='M10 0h10v5h5v5h5v10h-5v5h-5v5H10v-5H5v-5H0V10h5V5h5zM15 10.5a4.5 4.5 0 1 0 0 9a4.5 4.5 0 0 0 0-9z'/%3E%3C/svg%3E");
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--crema); color:var(--tinta); font:17px/1.5 var(--ui); }
+  img { max-width:100%; height:auto; display:block; }
+  a { color:inherit; text-underline-offset:3px; }
+  :focus-visible { outline:3px solid var(--sol); outline-offset:3px; }
+  .ancho { max-width:1040px; margin:0 auto; padding:0 20px; }
+  /* cabecera: nombre, idioma y los tres datos, todo junto */
+  header { background:radial-gradient(90% 220% at 80% 0%,#4a1620 0%,#2a130f 45%,var(--tinta) 82%); color:var(--hueso); }
+  header .arriba { display:flex; align-items:center; gap:14px; padding-top:18px; }
+  .nombre { font:900 21px/1 var(--titulo); color:var(--hueso); text-decoration:none; letter-spacing:.05em; text-transform:uppercase; }
+  .idiomas { display:flex; margin-left:auto; border:2px solid rgba(246,239,220,.45); }
+  .idiomas button { font:800 14px var(--ui); background:none; border:0; color:#d8c9aa; padding:6px 11px; cursor:pointer; }
+  .idiomas button[aria-pressed="true"] { background:var(--ocre); color:var(--tinta); }
+  header .titulo { display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:8px 26px; padding-top:20px; padding-bottom:22px; }
+  h1 { font:900 clamp(36px,5vw,54px)/1 var(--titulo); text-transform:uppercase; margin:0; letter-spacing:.01em; }
+  .datos { margin:0; font:700 18px/1.4 var(--ui); color:var(--sol); }
+  .wiphala { height:6px; background:linear-gradient(90deg,#b3261e 0 14.28%,#d9681d 0 28.57%,#edb93a 0 42.85%,#f6efdc 0 57.14%,#4f7d2a 0 71.42%,#1f5c8a 0 85.71%,#5b3a8c 0); }
+
+  section { padding:36px 0 40px; }
+  .f-petroleo { background:var(--petroleo); color:var(--hueso); border-top:var(--trazo); border-bottom:var(--trazo); }
+  h2 { font:900 38px/1 var(--titulo); text-transform:uppercase; letter-spacing:.02em; margin:0 0 22px; display:flex; align-items:center; gap:13px; }
+  h2::before { content:""; flex:none; width:26px; height:26px; background:var(--terracota); -webkit-mask:var(--chakana) center/contain no-repeat; mask:var(--chakana) center/contain no-repeat; }
+  .f-petroleo h2::before { background:var(--ocre); }
+  h3 { font:400 26px/1.15 var(--titulo); letter-spacing:.03em; text-transform:uppercase; margin:0; }
+
+  .tres { display:grid; gap:24px; grid-template-columns:repeat(3,minmax(0,1fr)); }
+  #descargas .tres { grid-template-columns:minmax(0,1.22fr) minmax(0,.86fr) minmax(0,1.02fr); }
+  .ficha { background:var(--hueso); color:var(--tinta); border:var(--trazo); box-shadow:6px 6px 0 var(--tinta); padding:20px 20px 22px; }
+  .botones { display:flex; flex-wrap:wrap; gap:10px; margin-top:16px; }
+  /* los tres títulos de arriba miden lo mismo, así la miniatura del disco entra con aire y los botones quedan alineados */
+  #descargas { padding:28px 0 32px; }
+  #descargas .ficha { padding-top:18px; }
+  #descargas .ficha > h3, .con-tapa { display:flex; align-items:center; height:48px; }
+  .con-tapa { gap:13px; }
+  .con-tapa a { flex:none; margin:-6px 0; }
+  .con-tapa img { width:60px; height:60px; border:2px solid var(--tinta); }
+  #descargas .botones { margin-top:14px; }
+  .botones .btn { font-size:14.5px; letter-spacing:.02em; padding:9px 8px; }
+  .btn { display:inline-flex; align-items:center; gap:6px; font:800 15px var(--ui); letter-spacing:.05em; text-transform:uppercase; text-decoration:none; padding:9px 12px; color:var(--tinta); background:var(--ocre); border:var(--trazo); box-shadow:3px 3px 0 var(--tinta); cursor:pointer; }
+  .btn:hover { transform:translate(-1px,-1px); box-shadow:4px 4px 0 var(--tinta); }
+  .btn.claro { background:var(--hueso); }
+
+  /* tres videos en fila; el teaser un poco más grande */
+  .videos { display:grid; grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr); gap:26px; align-items:end; }
+  figure { margin:0; }
+  .pantalla { position:relative; aspect-ratio:16/9; border:3px solid var(--hueso); background:#000; }
+  .pantalla button, .pantalla iframe { position:absolute; inset:0; width:100%; height:100%; border:0; padding:0; cursor:pointer; background:#000 center/cover no-repeat; }
+  .pantalla button::after { content:"▶"; position:absolute; left:50%; top:50%; width:46px; height:46px; margin:-23px 0 0 -23px; border-radius:50%; background:var(--terracota); border:3px solid var(--hueso); color:var(--hueso); display:grid; place-items:center; font-size:16px; }
+  figcaption { margin-top:11px; font:400 20px/1.2 var(--titulo); letter-spacing:.03em; text-transform:uppercase; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+
+  .fotos { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:24px; }
+  .fotos figure { border:var(--trazo); box-shadow:6px 6px 0 var(--tinta); background:var(--tinta); }
+  .fotos img { width:100%; aspect-ratio:1/1; object-fit:cover; }
+  .fotos figure.logo img { object-fit:contain; background:#fff; }
+  .fotos a { display:block; text-align:center; color:var(--hueso); font:800 14.5px var(--ui); letter-spacing:.09em; text-transform:uppercase; padding:11px 8px; text-decoration:none; }
+  .fotos a:hover { color:var(--sol); }
+  .credito { color:var(--suave); font-size:15px; margin:18px 0 0; }
+  .textos { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.3fr); gap:24px; margin-top:34px; }
+  .textos .cabo { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px; margin-bottom:14px; }
+  .textos .cabo h3 { font-size:22px; }
+  .textos .cabo .btn { font-size:13.5px; padding:6px 12px; }
+  .texto { font:400 17.5px/1.6 var(--verso); }
+  .texto p { margin:0 0 10px; }
+  .texto p:last-child { margin:0; }
+
+  .contacto { background:var(--tinta); color:var(--hueso); padding:36px 0 22px; }
+  .contacto h3 { font:800 13.5px var(--ui); letter-spacing:.16em; color:var(--ocre); margin-bottom:9px; }
+  .contacto p { margin:0 0 3px; overflow-wrap:anywhere; }
+  .pie { margin-top:28px; padding-top:14px; border-top:1px solid rgba(246,239,220,.2); color:#b9a888; font-size:14.5px; }
+
+  .cookies { position:fixed; left:16px; bottom:16px; z-index:45; max-width:min(400px, calc(100vw - 32px)); background:var(--hueso); color:var(--tinta);
+    border:2px solid var(--tinta); box-shadow:3px 3px 0 var(--tinta); padding:8px 10px; display:flex; flex-wrap:wrap; gap:6px 10px; align-items:center; font:13.5px/1.35 var(--ui); }
+  .cookies p { margin:0; flex:1 1 180px; }
+  .cookies-botones { display:flex; gap:6px; margin-left:auto; }
+  .cookies-btn { min-height:30px; padding:3px 10px; font:800 13px var(--ui); cursor:pointer; background:var(--hueso); color:var(--tinta); border:2px solid var(--tinta); }
+  .cookies-btn:hover { background:var(--papel); }
+
+  @media (max-width:820px) {
+    .tres, #descargas .tres, .textos { grid-template-columns:minmax(0,1fr); }
+    figcaption { white-space:normal; }
+    .videos { align-items:start; }
+    .videos { grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+    .videos figure:first-child { grid-column:1 / -1; }
+    .fotos { grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+    .ficha, .fotos figure { margin-right:6px; }
+    #descargas .ficha { padding-left:14px; padding-right:14px; }
+    #descargas .ficha > h3 { height:auto; }
+    .botones { gap:8px; }
+    .botones .btn { font-size:14px; padding:9px 6px; }
+    .tres, .textos { gap:20px; }
+    h2 { font-size:34px; }
+    section { padding:30px 0 34px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="ancho arriba">
+    <a class="nombre" href="./" data-sitio="">Trio Tikismikis</a>
+    <div class="idiomas" role="group" aria-label="Idioma / Langue / Language">
+      <button type="button" data-idioma="es" aria-pressed="true">ES</button>
+      <button type="button" data-idioma="fr" aria-pressed="false">FR</button>
+      <button type="button" data-idioma="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+  <div class="ancho titulo">
+    <h1 data-t="h1">Espacio profesional</h1>
+    <p class="datos" data-t="datos">3 músicos · Unos 75 minutos · Toulouse, Francia</p>
+  </div>
+  <div class="wiphala" aria-hidden="true"></div>
+</header>
+
+<main>
+
+<section id="descargas">
+  <div class="ancho tres">
+    <article class="ficha">
+      <h3 data-t="dossier">Press kit</h3>
+      <div class="botones">
+        <a class="btn" href="descargas/Trio-Tikismikis-dossier-de-presse-FR.pdf" download data-umami-event="Press kit FR">↓ Français</a>
+        <a class="btn" href="https://drive.google.com/uc?export=download&amp;id=15P-hY3jVIv5WavvynzzW5Op2ZOqOeCbK" rel="noopener" data-umami-event="Press kit EN">↓ English</a>
+        <a class="btn" href="https://drive.google.com/uc?export=download&amp;id=18HwAHsYUfLAqWBkeHj_5ttcB880HF3iw" rel="noopener" data-umami-event="Press kit ES">↓ Español</a>
+      </div>
+    </article>
+    <article class="ficha">
+      <h3 data-t="tecnica">Ficha técnica</h3>
+      <div class="botones">
+        <a class="btn" href="descargas/Trio-Tikismikis-fiche-technique-FR.pdf" download data-umami-event="Ficha tecnica FR">↓ Français</a>
+        <a class="btn" href="descargas/Trio-Tikismikis-technical-rider-EN.pdf" download data-umami-event="Technical rider EN">↓ English</a>
+      </div>
+    </article>
+    <article class="ficha">
+      <div class="con-tapa">
+        <a href="https://lnk.to/1TB9EG" target="_blank" rel="noopener" data-umami-event="Escuchar disco"><img src="fotos/tapa-pedaleando-suenos.jpg" alt="Pedaleando Sueños" width="1200" height="1194"></a>
+        <h3 data-t="disco">Disco y prensa</h3>
+      </div>
+      <div class="botones">
+        <a class="btn" href="https://lnk.to/1TB9EG" target="_blank" rel="noopener" data-umami-event="Escuchar disco" data-t="escuchar">▶ Escuchar</a>
+        <a class="btn" href="https://www.dropbox.com/scl/fo/2u9o4y3mci7lezla3stye/AKQZai0Pbj1jAMIrjbeYXNc?rlkey=owkaucq28ke3uuwlxeib5miri&amp;dl=0" target="_blank" rel="noopener" data-umami-event="Disco WAV">↓ WAV</a>
+        <a class="btn claro" href="./#prensa" data-sitio="prensa" target="_blank" rel="noopener" data-t="resenas">Reseñas</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="f-petroleo" id="videos">
+  <div class="ancho">
+    <h2 data-t="videos">Videos</h2>
+    <div class="videos">
+      <figure><div class="pantalla"><button type="button" data-yt="sqgZeteeK74" aria-label="Teaser"></button></div><figcaption data-t="teaser">Teaser en vivo</figcaption></figure>
+      <figure><div class="pantalla"><button type="button" data-yt="aEJOkYBiUp8" aria-label="La loca"></button></div><figcaption>La loca</figcaption></figure>
+      <figure><div class="pantalla"><button type="button" data-yt="HM4sdqpMCWc" aria-label="Gatito del dulce amor"></button></div><figcaption>Gatito del dulce amor</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="fotos">
+  <div class="ancho">
+    <h2 data-t="fotos">Fotos</h2>
+    <div class="fotos">
+      <figure><img src="fotos/tikis-46.jpg" alt="Trio Tikismikis" width="1600" height="1600"><a href="descargas/Trio-Tikismikis-photo-1.jpg" download data-umami-event="Foto 1" data-t="bajar">↓ Descargar</a></figure>
+      <figure><img src="fotos/tikis-56.jpg" alt="Trio Tikismikis" width="1600" height="1600"><a href="descargas/Trio-Tikismikis-photo-2.jpg" download data-umami-event="Foto 2" data-t="bajar">↓ Descargar</a></figure>
+      <figure><img src="fotos/tikis-61.jpg" alt="Trio Tikismikis" width="1600" height="1600"><a href="descargas/Trio-Tikismikis-photo-3.jpg" download data-umami-event="Foto 3" data-t="bajar">↓ Descargar</a></figure>
+      <figure class="logo"><img src="fotos/logo-recorte.jpg" alt="Logo" width="871" height="416"><a href="descargas/Trio-Tikismikis-logo.jpg" download data-umami-event="Logo" data-t="logo">↓ Logo</a></figure>
+    </div>
+    <p class="credito" data-t="credito">Crédito de las fotos: Lionel Pesqué.</p>
+
+    <div class="textos">
+      <article class="ficha">
+        <div class="cabo"><h3 data-t="corto">Texto de presentación corto</h3><button type="button" class="btn claro" data-copiar="textoCorto" data-t="copiar">Copiar</button></div>
+        <div class="texto" id="textoCorto"><p data-t="corto-1">Trío Tikismikis, el trío franco-argentino de Toulouse. Canciones propias y repertorio popular que cantan la tierra, la memoria y la justicia social.</p></div>
+      </article>
+      <article class="ficha">
+        <div class="cabo"><h3 data-t="largo">Texto de presentación largo</h3><button type="button" class="btn claro" data-copiar="textoLargo" data-t="copiar">Copiar</button></div>
+        <div class="texto" id="textoLargo">
+          <p data-t="largo-1">El Trío Tikismikis nació en Toulouse, del encuentro de tres músicos en torno al folclore argentino. Luciano Luna y Marco Grancelli, multiinstrumentistas argentinos, y la violinista franco-española Chloé Bousquet unen sus voces y sus instrumentos para hacer dialogar tradición y creación.</p>
+          <p data-t="largo-2">El trío mezcla composiciones propias con repertorio popular argentino: chacareras, zambas, gatos, bailecitos, vidalas y huaynos, a tres voces y con cinco instrumentos.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="contacto" id="contacto">
+  <div class="ancho">
+    <div class="tres">
+      <div><h3>Booking · KBKC Artistes</h3><p>Téo · <a href="tel:+33633497643">+33 (0)6 33 49 76 43</a></p><p><a href="mailto:booking@kbkc-artistes.com">booking@kbkc-artistes.com</a></p></div>
+      <div><h3 data-t="admin">Administración · KBKC Artistes</h3><p>Christelle · <a href="tel:+33681125271">+33 (0)6 81 12 52 71</a></p><p><a href="mailto:contact@kbkc-artistes.com">contact@kbkc-artistes.com</a></p></div>
+      <div><h3 data-t="trio">El trío</h3><p><a href="mailto:contact@triotikismikis.com">contact@triotikismikis.com</a></p><p><a href="./#agenda" data-sitio="agenda" target="_blank" rel="noopener" data-t="agenda">Ver la agenda ↗</a></p></div>
+    </div>
+    <div class="pie">© 2026 Trio Tikismikis · <a href="privacidad.html" data-t="priv">Privacidad y cookies</a></div>
+  </div>
+</footer>
+
+<script>
+/* clave: francés, inglés. El castellano es el escrito en la página. */
+var TEXTOS = {
+  "h1": ["Espace professionnel", "For professionals"],
+  "datos": ["3 musiciens · 75 minutes environ · Toulouse, France", "3 musicians · About 75 minutes · Toulouse, France"],
+  "dossier": ["Dossier de presse", "Press kit"],
+  "tecnica": ["Fiche technique", "Technical rider"],
+  "disco": ["Album et presse", "Album and press"],
+  "escuchar": ["▶ Écouter", "▶ Listen"],
+  "resenas": ["Articles", "Reviews"],
+  "videos": ["Vidéos", "Videos"],
+  "teaser": ["Teaser en live", "Live teaser"],
+  "fotos": ["Photos", "Photos"],
+  "bajar": ["↓ Télécharger", "↓ Download"],
+  "logo": ["↓ Logo", "↓ Logo"],
+  "credito": ["Crédit photo : Lionel Pesqué.", "Photo credit: Lionel Pesqué."],
+  "corto": ["Texte de présentation court", "Short presentation text"],
+  "corto-1": ["Trio Tikismikis, le trio franco-argentin de Toulouse. Des chansons originales et un répertoire populaire qui chantent la terre, la mémoire et la justice sociale.", "Trio Tikismikis, the Franco-Argentine trio from Toulouse. Original songs and popular repertoire that sing of the land, of memory and of social justice."],
+  "largo": ["Texte de présentation long", "Long presentation text"],
+  "largo-1": ["Le Trio Tikismikis est né à Toulouse, de la rencontre de trois musiciens autour du folklore argentin. Luciano Luna et Marco Grancelli, multi-instrumentistes argentins, et la violoniste franco-espagnole Chloé Bousquet unissent leurs voix et leurs instruments pour faire dialoguer tradition et création.", "Trio Tikismikis was born in Toulouse, when three musicians met around Argentine folk music. Luciano Luna and Marco Grancelli, Argentine multi-instrumentalists, and Franco-Spanish violinist Chloé Bousquet bring their voices and instruments together in a dialogue between tradition and creation."],
+  "largo-2": ["Le trio mêle ses compositions au répertoire populaire argentin : chacareras, zambas, gatos, bailecitos, vidalas et huaynos, à trois voix et avec cinq instruments.", "The trio blends its own compositions with Argentine popular repertoire: chacareras, zambas, gatos, bailecitos, vidalas and huaynos, for three voices and five instruments."],
+  "copiar": ["Copier", "Copy"],
+  "admin": ["Administration · KBKC Artistes", "Administration · KBKC Artistes"],
+  "trio": ["Le trio", "The trio"],
+  "agenda": ["Voir l'agenda ↗", "See our dates ↗"],
+  "priv": ["Confidentialité et cookies", "Privacy and cookies"]
+};
+var TITULOS = { es: 'Trío Tikismikis · Espacio profesional', fr: 'Trio Tikismikis · Espace professionnel', en: 'Trio Tikismikis · For professionals' };
+var COPIADO = { es: 'Copiado ✓', fr: 'Copié ✓', en: 'Copied ✓' };
+
+(function () {
+  function todos(s) { return Array.prototype.slice.call(document.querySelectorAll(s)); }
+  var nodos = todos('[data-t]');
+  nodos.forEach(function (n) { n.setAttribute('data-es', n.innerHTML); });
+  var botones = todos('.idiomas button');
+  function poner(idioma) {
+    var i = idioma === 'fr' ? 0 : 1;
+    nodos.forEach(function (n) {
+      var par = TEXTOS[n.getAttribute('data-t')];
+      n.innerHTML = (idioma === 'es' || !par) ? n.getAttribute('data-es') : par[i];
+    });
+    document.documentElement.lang = idioma;
+    botones.forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-idioma') === idioma)); });
+    document.title = TITULOS[idioma];
+    /* los enlaces al sitio lo abren en el mismo idioma */
+    todos('[data-sitio]').forEach(function (a) {
+      var ancla = a.getAttribute('data-sitio');
+      a.setAttribute('href', './?lang=' + idioma + (ancla ? '#' + ancla : ''));
+    });
+    try { localStorage.setItem('idioma', idioma); } catch (e) {}
+  }
+  botones.forEach(function (b) { b.addEventListener('click', function () { poner(b.getAttribute('data-idioma')); }); });
+  var pedido = (/[?&]lang=(es|fr|en)(&|$)/.exec(location.search) || [])[1];
+  var guardado = null;
+  try { guardado = localStorage.getItem('idioma'); } catch (e) {}
+  var nav = (navigator.language || 'es').slice(0, 2).toLowerCase();
+  poner(pedido || guardado || (nav === 'es' || nav === 'fr' ? nav : (nav === 'ca' || nav === 'gl' ? 'es' : 'en')));
+
+  /* copiar un texto con un toque */
+  todos('[data-copiar]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var caja = document.getElementById(b.getAttribute('data-copiar'));
+      var texto = Array.prototype.map.call(caja.querySelectorAll('p'), function (p) { return p.textContent.trim(); }).join('\n\n');
+      function listo() {
+        var antes = b.innerHTML;
+        b.textContent = COPIADO[document.documentElement.lang] || COPIADO.es;
+        setTimeout(function () { b.innerHTML = antes; }, 1600);
+      }
+      function aMano() { var r = document.createRange(); r.selectNodeContents(caja); var s = getSelection(); s.removeAllRanges(); s.addRange(r); }
+      if (navigator.clipboard) navigator.clipboard.writeText(texto).then(listo, aMano); else aMano();
+    });
+  });
+
+  /* videos: se ve la imagen y recién al tocar se carga YouTube */
+  todos('.pantalla button').forEach(function (b) {
+    var id = b.getAttribute('data-yt');
+    b.style.backgroundImage = 'url(https://img.youtube.com/vi/' + id + '/maxresdefault.jpg), url(https://img.youtube.com/vi/' + id + '/hqdefault.jpg)';
+    b.addEventListener('click', function () {
+      if (location.protocol === 'file:') { window.open('https://www.youtube.com/watch?v=' + id, '_blank'); return; }
+      var f = document.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
+      f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+      f.allowFullscreen = true;
+      f.title = b.getAttribute('aria-label');
+      b.parentNode.replaceChild(f, b);
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -5,8 +5,10 @@
    - Las estadísticas (Umami) van aparte, en el <head>: no usan cookies y no dependen de esto.
    Para cambiar el pixel: PIXELES. La elección se guarda con el nombre CLAVE. */
 (function () {
-  var PIXELES = ['1781858836448711'];            // pixel «Sitio Tikismikis», propio del sitio, en la empresa Tikismikis
-  var CLAVE = 'tikismikis:cookies';              // localStorage: "si" / "no"
+  var PIXELES = ['1781858836448711',             // pixel «Sitio Tikismikis», propio del sitio, en la empresa Tikismikis
+                 '1483054440455392'];            // pixel del sitio de Marco solista (el mismo de coplario.com): cruza los públicos
+  var CLAVE = 'tikismikis:cookies2';             // localStorage: "si" / "no"
+  var CLAVE_ANTERIOR = 'tikismikis:cookies';     // elección de cuando había un solo pixel (hasta el 26/11/2026)
   var PRIVACIDAD = 'privacidad.html';
   var TXT = {
     es: { aviso: 'Este sitio utiliza cookies de terceros para personalizar contenidos.', mas: 'Más información', no: 'Rechazar', si: 'Aceptar',
@@ -19,7 +21,10 @@
   if (!PIXELES.length) return;
 
   function t() { var l = (document.documentElement.lang || 'es').slice(0, 2).toLowerCase(); return TXT[l] || TXT.es; }
-  function leer() { try { return localStorage.getItem(CLAVE); } catch (e) { return null; } }
+  function leer() {                              // quien había aceptado vuelve a elegir; quien había rechazado sigue en «no»
+    try { return localStorage.getItem(CLAVE) || (localStorage.getItem(CLAVE_ANTERIOR) === 'no' ? 'no' : null); }
+    catch (e) { return null; }
+  }
   function guardar(v) { try { localStorage.setItem(CLAVE, v); } catch (e) {} }
 
   var cargado = false;

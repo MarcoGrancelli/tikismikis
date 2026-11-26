@@ -26,12 +26,15 @@
 <script defer src="https://cloud.umami.is/script.js" data-website-id="389c338f-0543-4235-92ae-582fab6ea949" data-domains="www.triotikismikis.com,triotikismikis.com"></script>
 <!-- Aviso de cookies y pixel de Meta (el pixel solo se carga si la persona acepta). -->
 <script src="cookies.js" defer></script>
+<!-- Agenda: los conciertos se anotan en agenda.js. -->
+<script src="agenda.js" defer></script>
 <!--
   CÓMO CAMBIAR LOS TEXTOS
   - El castellano está escrito acá abajo, en la página. El francés y el inglés están al final,
     en la lista «TEXTOS» (cada renglón: clave, francés, inglés). La clave es la que figura en data-t="…".
   - Las fotos están en la carpeta «fotos» de al lado. Para cambiar una, reemplazar el archivo con el mismo nombre.
   - Los videos: cambiar el código de YouTube en data-yt="…".
+  - Los conciertos de la Agenda están en «agenda.js».
   - Los colores salen de la tapa de «Pedaleando Sueños» (Dolores Mendieta): están todos juntos acá abajo, en «:root».
 -->
 <style>
@@ -144,6 +147,25 @@
   .pantalla button:hover::after { transform: rotate(90deg) scale(1.06); }
   .pantalla iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 
+  /* agenda: cada fecha en un renglón de afiche */
+  .agenda-lista { list-style: none; margin: 0; padding: 0; background: var(--hueso); color: var(--tinta); border: var(--trazo); box-shadow: 7px 7px 0 var(--tinta); }
+  .agenda-lista[hidden], .agenda-vacia[hidden], details.anteriores[hidden] { display: none; }
+  .agenda-lista li { display: grid; grid-template-columns: 128px minmax(0, 1.2fr) minmax(0, 1fr); align-items: stretch; border-top: var(--trazo); }
+  .agenda-lista li:first-child { border-top: 0; }
+  .agenda-lista time { background: var(--tinta); color: var(--hueso); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 12px 8px; text-align: center; }
+  .agenda-lista .dia { font: 900 38px/1 var(--titulo); color: var(--sol); }
+  .agenda-lista .mes { font: 800 13px/1.4 var(--ui); letter-spacing: .08em; text-transform: uppercase; }
+  .agenda-lista .lugar { align-self: center; padding: 14px 22px; font: 700 21px/1.3 var(--verso); }
+  .agenda-lista .donde { align-self: center; padding: 14px 22px 14px 0; font: 500 17px/1.35 var(--ui); }
+  .agenda-lista .pais { display: block; font: 800 13.5px var(--ui); letter-spacing: .12em; text-transform: uppercase; color: var(--borgona); }
+  .agenda-vacia { font: italic 500 21px/1.45 var(--verso); }
+  details.anteriores { margin-top: 38px; background: var(--papel); border: var(--trazo); box-shadow: 7px 7px 0 var(--tinta); }
+  details.anteriores summary { cursor: pointer; padding: 16px 24px; font: 400 26px/1.2 var(--titulo); letter-spacing: .03em; text-transform: uppercase; list-style: none; display: flex; align-items: center; gap: 14px; }
+  details.anteriores summary::-webkit-details-marker { display: none; }
+  details.anteriores summary::before { content: "+"; flex: none; width: 32px; height: 32px; background: var(--tinta); color: var(--hueso); display: grid; place-items: center; font: 800 22px/1 var(--ui); }
+  details.anteriores[open] summary::before { content: "–"; }
+  details.anteriores .agenda-lista { border: 0; border-top: var(--trazo); box-shadow: none; }
+
   /* disco */
   .disco { display: grid; grid-template-columns: minmax(0, 480px) minmax(0, 1fr); gap: 58px; align-items: center; }
   .disco .ficha { font: 800 14.5px var(--ui); letter-spacing: .14em; text-transform: uppercase; color: var(--borgona); margin: 0 0 10px; }
@@ -247,9 +269,17 @@
     .contacto { padding: 52px 0 54px; }
     .cita.grande { padding: 26px 24px 22px; }
     details.temas ol { padding-left: 46px; }
-    .marco, .oscuro .marco, .galeria a, .cita, details.temas { box-shadow: 5px 5px 0 var(--tinta); }
+    .marco, .oscuro .marco, .galeria a, .cita, details.temas, details.anteriores, .agenda-lista { box-shadow: 5px 5px 0 var(--tinta); }
     .oscuro .marco { box-shadow: 5px 5px 0 var(--terracota); }
-    .marco, .galeria a, .cita, details.temas { margin-right: 5px; }
+    .marco, .galeria a, .cita, details.temas, details.anteriores, .agenda-lista { margin-right: 5px; }
+    details.anteriores summary { padding: 14px 16px; font-size: 22px; }
+    .agenda-lista li { grid-template-columns: 92px minmax(0, 1fr); }
+    .agenda-lista time { grid-row: 1 / span 2; }
+    .agenda-lista .dia { font-size: 32px; }
+    .agenda-lista .mes { font-size: 12px; }
+    .agenda-lista .lugar { align-self: end; padding: 12px 14px 2px; font-size: 19px; }
+    .agenda-lista .donde { align-self: start; padding: 0 14px 12px; font-size: 16px; }
+    details.anteriores .agenda-lista { box-shadow: none; margin: 0; }
   }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
 </style>
@@ -262,6 +292,7 @@
     <nav aria-label="Secciones">
       <a href="#concierto" data-t="n-concierto">El concierto</a>
       <a href="#videos" data-t="n-videos">Videos</a>
+      <a href="#agenda" data-t="n-agenda">Agenda</a>
       <a href="#disco" data-t="n-disco">Disco</a>
       <a href="#trio" data-t="n-trio">El trío</a>
       <a href="#prensa" data-t="n-prensa">Prensa</a>
@@ -342,6 +373,21 @@
         <figcaption><span data-t="v-3">«Gatito del dulce amor»</span> <a href="https://www.youtube.com/watch?v=HM4sdqpMCWc" target="_blank" rel="noopener">YouTube ↗</a></figcaption>
       </figure>
     </div>
+  </div>
+</section>
+
+<!-- ============ AGENDA (los conciertos están en agenda.js) ============ -->
+<div class="guarda" aria-hidden="true"></div>
+<section class="bloque f-papel" id="agenda">
+  <div class="ancho">
+    <h2 data-t="a-h" style="margin-bottom:32px">Agenda</h2>
+    <h3 data-t="a-prox" style="margin-bottom:16px">Próximos conciertos</h3>
+    <ol class="agenda-lista" id="agendaProximos"></ol>
+    <p class="agenda-vacia" id="agendaVacia" data-t="a-vacia" hidden>Pronto anunciamos nuevas fechas.</p>
+    <details class="anteriores" id="agendaAnteriores" hidden>
+      <summary data-t="a-ant">Conciertos anteriores</summary>
+      <ol class="agenda-lista" id="agendaPasados"></ol>
+    </details>
   </div>
 </section>
 
@@ -577,6 +623,12 @@ var TEXTOS = {
   "v-2": ["« La loca »", "“La loca”"],
   "v-3": ["« Gatito del dulce amor »", "“Gatito del dulce amor”"],
 
+  "n-agenda": ["Agenda", "Dates"],
+  "a-h": ["Agenda", "Dates"],
+  "a-prox": ["Prochains concerts", "Upcoming concerts"],
+  "a-vacia": ["De nouvelles dates bientôt.", "New dates coming soon."],
+  "a-ant": ["Concerts passés", "Past concerts"],
+
   "d-ficha": ["Premier album · septembre 2026 · 15 titres", "First album · September 2026 · 15 tracks"],
   "d-p1": ["Deux ans de travail entre compositions originales et classiques du folklore argentin. Les chansons donnent voix aux travailleurs, aux paysans, aux exilés, aux amoureux et à celles et ceux qui continuent d'avancer, portés par leurs rêves.",
            "Two years of work between original compositions and classics of Argentine folk music. The songs give voice to workers, peasants, exiles, lovers and all those who keep moving forward, carried by their dreams."],
@@ -660,6 +712,9 @@ var TEXTOS = {
   try { guardado = localStorage.getItem('idioma'); } catch (e) {}
   var nav = (navigator.language || 'es').slice(0, 2).toLowerCase();
   var inicial = guardado || (nav === 'es' || nav === 'fr' ? nav : (nav === 'ca' || nav === 'gl' ? 'es' : 'en'));
+  /* un enlace puede pedir el idioma (…/?lang=fr), por ejemplo desde un mail en francés */
+  var pedido = (/[?&]lang=(es|fr|en)(&|$)/.exec(location.search) || [])[1];
+  if (pedido) inicial = pedido;
   if (inicial !== 'es') poner(inicial);
 
   /* videos: se ve la imagen y recién al tocar se carga YouTube */
